@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pkZ-zZ-H6B">
-                                <rect key="frame" x="162" y="66" width="90" height="32"/>
+                                <rect key="frame" x="135.5" y="66" width="143" height="32"/>
                                 <segments>
                                     <segment title="" image="img_lista_80"/>
                                     <segment title="" image="img_varios_80"/>
