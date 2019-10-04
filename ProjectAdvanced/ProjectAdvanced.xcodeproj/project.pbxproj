@@ -21,6 +21,9 @@
 		D9A5848A2346647100E65A86 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A584882346647100E65A86 /* PersonCollectionViewCell.swift */; };
 		D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */; };
 		D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5848D2346659C00E65A86 /* UIView+Utils.swift */; };
+		D9F46B0C23479C50009FBE23 /* lottie2.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0B23479C50009FBE23 /* lottie2.json */; };
+		D9F46B0E23479CF8009FBE23 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0D23479CF8009FBE23 /* lottie.json */; };
+		D9F46B1023479EE9009FBE23 /* lottie_bueno.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		D9A584882346647100E65A86 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9A5848D2346659C00E65A86 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		D9F46B0B23479C50009FBE23 /* lottie2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie2.json; sourceTree = "<group>"; };
+		D9F46B0D23479CF8009FBE23 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lottie.json; path = ../../../../../lottie.json; sourceTree = "<group>"; };
+		D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_bueno.json; sourceTree = "<group>"; };
 		F3E0431F66646819B8AE39F9 /* Pods-ProjectAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-ProjectAdvanced/Pods-ProjectAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +88,6 @@
 				D9A5848C2346658000E65A86 /* Extension */,
 				D94136B0234523FD00D4D71B /* Info.plist */,
 				D9A584772346448C00E65A86 /* UI */,
-				D9A584792346449D00E65A86 /* Controllers */,
 				D9A584762346447B00E65A86 /* Data */,
 			);
 			path = ProjectAdvanced;
@@ -100,6 +105,9 @@
 		D9A584752346446900E65A86 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */,
+				D9F46B0D23479CF8009FBE23 /* lottie.json */,
+				D9F46B0B23479C50009FBE23 /* lottie2.json */,
 				D94136AB234523FD00D4D71B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -117,6 +125,7 @@
 		D9A584772346448C00E65A86 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D9A584792346449D00E65A86 /* Controllers */,
 				D9A58487234662D700E65A86 /* Cells */,
 				D9A5847D234644C400E65A86 /* StoryBoard */,
 			);
@@ -256,8 +265,11 @@
 				D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */,
 				D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */,
 				D94136AA234523F100D4D71B /* Main.storyboard in Resources */,
+				D9F46B1023479EE9009FBE23 /* lottie_bueno.json in Resources */,
+				D9F46B0E23479CF8009FBE23 /* lottie.json in Resources */,
 				D9A5848023464B2900E65A86 /* Splash.storyboard in Resources */,
 				D9A58486234662AE00E65A86 /* PersonTableViewCell.xib in Resources */,
+				D9F46B0C23479C50009FBE23 /* lottie2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  UserViewController.swift
 //  ProjectAdvanced
 //
-//  Created by Dev2 on 03/10/2019.
+//  Created by Manuel Martín on 03/10/2019.
 //  Copyright © 2019 Orum Games. All rights reserved.
 //
 
@@ -10,10 +10,12 @@ import UIKit
 
 class UserViewController: UIViewController {
      
-        // MARK: - Outlets -
+    // MARK: - Outlets -
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var segmenOptions: UISegmentedControl!
   
+    
     // MARK: - Properties
     private var cellSpacing: CGFloat = 16.0
     
@@ -24,6 +26,7 @@ class UserViewController: UIViewController {
     
 }
 
+// MARK: - Extension Methods Table View -
 
 extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -47,7 +50,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-
+// MARK: - Extension Methods Collection View -
 extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     /// Configure collectionView with default options

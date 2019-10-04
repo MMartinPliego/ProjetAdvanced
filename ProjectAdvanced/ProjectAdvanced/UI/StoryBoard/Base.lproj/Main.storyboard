@@ -48,8 +48,9 @@
                                 </segments>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pkZ-zZ-H6B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Etm-lA-vbU"/>
                             <constraint firstItem="YTv-5B-tYZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lgc-eb-gQR"/>
                             <constraint firstItem="YTv-5B-tYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PTx-mq-PQZ"/>
                             <constraint firstItem="YTv-5B-tYZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RzB-Vk-Gl2"/>
@@ -65,6 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="n3m-Bx-voO" id="OtH-uy-wxx"/>
+                        <outlet property="segmenOptions" destination="pkZ-zZ-H6B" id="TSX-p8-ZzO"/>
                         <outlet property="tableView" destination="YTv-5B-tYZ" id="qVG-xi-X6g"/>
                     </connections>
                 </viewController>

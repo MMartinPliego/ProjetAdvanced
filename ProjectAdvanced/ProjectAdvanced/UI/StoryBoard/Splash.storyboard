@@ -22,14 +22,13 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x8-6j-2Uf">
-                                <rect key="frame" x="80" y="444" width="254" height="250"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="60" y="444" width="294" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="spR-X1-1Ji"/>
+                                    <constraint firstAttribute="height" constant="350" id="spR-X1-1Ji"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5x8-6j-2Uf" firstAttribute="centerX" secondItem="D2O-6Q-Qjw" secondAttribute="centerX" id="4id-B6-TAv"/>
                             <constraint firstItem="PBA-aP-Caz" firstAttribute="trailing" secondItem="Koq-yg-pw5" secondAttribute="trailing" constant="80" id="KVV-Jg-e6B"/>
@@ -37,11 +36,14 @@
                             <constraint firstItem="Koq-yg-pw5" firstAttribute="leading" secondItem="PBA-aP-Caz" secondAttribute="leading" constant="80" id="fhk-QQ-Sp4"/>
                             <constraint firstItem="Koq-yg-pw5" firstAttribute="centerX" secondItem="D2O-6Q-Qjw" secondAttribute="centerX" id="j6O-12-y4R"/>
                             <constraint firstItem="5x8-6j-2Uf" firstAttribute="top" secondItem="Koq-yg-pw5" secondAttribute="bottom" constant="50" id="kNW-sE-apz"/>
-                            <constraint firstItem="PBA-aP-Caz" firstAttribute="trailing" secondItem="5x8-6j-2Uf" secondAttribute="trailing" constant="80" id="pSz-Uo-Lr4"/>
-                            <constraint firstItem="5x8-6j-2Uf" firstAttribute="leading" secondItem="PBA-aP-Caz" secondAttribute="leading" constant="80" id="zOS-yP-dOz"/>
+                            <constraint firstItem="PBA-aP-Caz" firstAttribute="trailing" secondItem="5x8-6j-2Uf" secondAttribute="trailing" constant="60" id="pSz-Uo-Lr4"/>
+                            <constraint firstItem="5x8-6j-2Uf" firstAttribute="leading" secondItem="PBA-aP-Caz" secondAttribute="leading" constant="60" id="zOS-yP-dOz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PBA-aP-Caz"/>
                     </view>
+                    <connections>
+                        <outlet property="mViewLoading" destination="5x8-6j-2Uf" id="Vtt-6p-34a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cui-mt-uk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
