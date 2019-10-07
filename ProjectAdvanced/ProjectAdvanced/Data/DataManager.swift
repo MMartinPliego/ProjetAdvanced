@@ -16,12 +16,15 @@ class DataManager {
 
     
     //Obtener usuarios
-    func users() {
+    func users(completion: ServiceCompletion) {
+        let users = usersDB()
         if usersDB().count > 0 {
-            
+            // devolver userDB
+            completion(.success(data: users))
         }
         else {
-            
+            //llamar al servicio y guardar los datos
+            userForceUptade(completion: completion)
         }
     }
     
@@ -32,6 +35,7 @@ class DataManager {
         switch result {
             case .success(let data):
                 guard let users = data as? UserDTO else {
+                    completion(.failure(msg: "Mensaje error genérico"))
                     return
             }
             
@@ -39,14 +43,16 @@ class DataManager {
             DatabaseManager.shared.deleteAll()
             // Guardar los nuevos usuarios
             save(users: users)
+                completion(.success(data: users))
             
         case .failure(let msg):
                 print("Fallo al obtener users \(msg)")
+                completion(.failure(msg: msg))
             }
         }
     }
     
-    func user(id: String) -> UserDAO {
+    func user(by id: String) -> UserDAO {
         return DatabaseManager.shared.user(by: id)
     }
     
