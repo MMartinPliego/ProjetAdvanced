@@ -223,8 +223,8 @@
 		D9F46B142347BEDD009FBE23 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				D9F46B152347BEF4009FBE23 /* Models */,
 				D9948A8E234BAEBB0018252D /* ApiManager.swift */,
+				D9F46B152347BEF4009FBE23 /* Models */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
