@@ -9,14 +9,14 @@
 import Foundation
 
 struct UserLocationDTO: Codable {
-    let street: UserStreetDTO?
     let city: String?
     let state: String?
+    let coordinates: UserCoordinatesDTO?
+    
+    // ¿Service Error?
+    let street: UserStreetDTO?
     let postcode: String?
     let country: String?
     let timezone: UserTimezonaDTO?
-    let coordinates: UserCoordinatesDTO?
-    
-    
 }
 

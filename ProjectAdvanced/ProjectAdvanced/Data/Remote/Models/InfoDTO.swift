@@ -10,8 +10,8 @@ import Foundation
 
 struct InfoDTO: Codable {
     let seed: String?
-    let count: Int?
     let page: Int?
+    let count: Int?
     let version: String?
     
     private enum CodingKeys: String, CodingKey {
