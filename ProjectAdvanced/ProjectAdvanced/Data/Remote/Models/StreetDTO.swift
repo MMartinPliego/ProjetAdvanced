@@ -1,5 +1,5 @@
 //
-//  UserNameDTO.swift
+//  StreetDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct UserNameDTO: Codable {
+struct StreetDTO: Codable {
     
-    let title: String?
-    let first: String?
-    let last: String?
-
+    let number: Int?
+    let name: String?
+    
 }

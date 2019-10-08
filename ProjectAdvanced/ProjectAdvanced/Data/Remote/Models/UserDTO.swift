@@ -10,14 +10,15 @@ import Foundation
 
 struct UserDTO: Codable {
     let gender: String?
-    let name: UserNameDTO?
-    let location: UserLocationDTO?
+    let name: NameDTO?
+    let location: LocationDTO?
     let email: String?
-    //let login: UserLoginDTO?
-    let dob: UserDobDTO?
-    let registered: UserRegisteredDTO?
+    let dob: DobDTO?
+    let registered: RegisteredDTO?
     let cell: Int?
-    let picture: UserPictureDTO?
+    let picture: PictureDTO?
     let nat: String?
+    
+    //let login: LoginDTO?
 
 }

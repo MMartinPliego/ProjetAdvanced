@@ -1,5 +1,5 @@
 //
-//  UserTimezonaDTO.swift
+//  NameDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,9 +8,10 @@
 
 import Foundation
 
-struct UserTimezonaDTO: Codable {
+struct NameDTO: Codable {
     
-    let offset: String?
-    let description: String?
-    
+    let title: String?
+    let first: String?
+    let last: String?
+
 }

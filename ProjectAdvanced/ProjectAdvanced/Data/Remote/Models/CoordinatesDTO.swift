@@ -1,5 +1,5 @@
 //
-//  UserStreetDTO.swift
+//  CoordinatesDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct UserStreetDTO: Codable {
+struct CoordinatesDTO: Codable {
     
-    let number: Int?
-    let name: String?
+    let longitud: String?
+    let latitude: String?
     
 }

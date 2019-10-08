@@ -1,5 +1,5 @@
 //
-//  UserCoordinatesDTO.swift
+//  TimezonaDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct UserCoordinatesDTO: Codable {
+struct TimezonaDTO: Codable {
     
-    let userLongitud: String?
-    let userLatitude: String?
+    let offset: String?
+    let description: String?
     
 }

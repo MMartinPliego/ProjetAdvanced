@@ -1,5 +1,5 @@
 //
-//  UserLoginDTO.swift
+//  LoginDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserLoginDTO: Codable {
+struct LoginDTO: Codable {
     
     let uuid: String?
     let userName: String?

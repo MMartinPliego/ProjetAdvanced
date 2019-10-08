@@ -1,5 +1,5 @@
 //
-//  UserLocationDTO.swift
+//  LocationDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct UserLocationDTO: Codable {
+struct LocationDTO: Codable {
     let city: String?
     let state: String?
-    let coordinates: UserCoordinatesDTO?
+    let coordinates: CoordinatesDTO?
     
     // ¿Service Error?
-    let street: UserStreetDTO?
+    let street: StreetDTO?
     let postcode: String?
     let country: String?
-    let timezone: UserTimezonaDTO?
+    let timezone: TimezonaDTO?
 }
 

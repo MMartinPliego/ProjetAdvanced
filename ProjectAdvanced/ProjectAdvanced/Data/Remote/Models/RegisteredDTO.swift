@@ -1,5 +1,5 @@
 //
-//  UserPictureDTO.swift
+//  RegisteredDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Dev2 on 04/10/2019.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct UserPictureDTO: Codable {
-    let large: String?
-    let medium: String?
-    let thumbnail: String?
+struct RegisteredDTO: Codable {
+    
+    let dateRegistered: Double?
+    let ageRegistered: Double?
     
 }
