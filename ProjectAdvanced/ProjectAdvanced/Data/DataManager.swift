@@ -9,6 +9,60 @@
 import Foundation
 
 class DataManager {
+    
+   //MARK: - Singleton declaration
+   static let shared = DataManager()
+   private init() {}
+    
+   func users(completion: ServiceCompletion) {
+    let users = usersDB()
+       if usersDB().count > 0 {
+       //devolver userDB
+           completion(.success(data: users))
+       }
+        
+       else{
+           //llamar al servicio y guardar usarios en la base de datos
+           usersForceUpdate(completion: completion)
+       }
+    
+   }
+    
+   func usersForceUpdate(completion: ServiceCompletion) {
+       //llamar al servicio y guardar usarios en la base de datos
+       ApiManager.shared.fetchUsers() { result in
+         switch result {
+             case .success(let data):
+                guard let users = data as? UsersDTO else {
+                    completion(.failure(msg:"Mensaje error generico"))
+                    return
+                }
+                // Eliminar todos los usuarios de la base de datos
+                DatabaseManager.shared.deleteAll()
+                //guardar los nuevos usuarios
+                save(users: users)
+                completion(.success(data: users))
+            
+             case .failure(let msg):
+                print("Fallo al obtener usuarios del Servicio: \(msg)")
+                completion(.failure (msg: msg))
+            }
+        }
+    }
+    
+   func user(id: String) -> UserDAO? {
+       return DatabaseManager.shared.user(by: id)
+   }
+    
+   private func usersDB() -> Array<UserDAO> {
+       return Array(DatabaseManager.shared.users())
+   }
+}
+
+
+
+/*
+class DataManager {
     // MARK: - Singleton declaration
     // solo inicia una clase
     static let shared = DataManager()
@@ -18,18 +72,18 @@ class DataManager {
     //Obtener usuarios
     func users(completion: ServiceCompletion) {
         let users = usersDB()
-        if usersDB().count > 0 {
+        if users.count > 0 {
             // devolver userDB
             completion(.success(data: users))
         }
         else {
             //llamar al servicio y guardar los datos
-            userForceUptade(completion: completion)
+            userForceUpdate(completion: completion)
         }
     }
     
 
-    func userForceUptade() {
+    func userForceUpdate(completion: ServiceCompletion) {
         //Llamar al servicio para obtener nuevos usuarios
         ApiManager.shared.fetchUsers() { result in
         switch result {
@@ -89,3 +143,4 @@ class DataManager {
     }
         
 }
+ /**/*/
