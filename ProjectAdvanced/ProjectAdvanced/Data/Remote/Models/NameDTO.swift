@@ -9,7 +9,6 @@
 import Foundation
 
 struct NameDTO: Codable {
-    
     let title: String?
     let first: String?
     let last: String?

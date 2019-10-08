@@ -17,6 +17,6 @@ struct LocationDTO: Codable {
     let street: StreetDTO?
     let postcode: String?
     let country: String?
-    let timezone: TimezonaDTO?
+    let timezone: TimezoneDTO?
 }
 

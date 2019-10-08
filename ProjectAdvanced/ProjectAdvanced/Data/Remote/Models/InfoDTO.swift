@@ -16,9 +16,9 @@ struct InfoDTO: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case seed
-        case count
         case page
-        case version = "results"
+        case version
+        case count = "reults"
     }
     
 }

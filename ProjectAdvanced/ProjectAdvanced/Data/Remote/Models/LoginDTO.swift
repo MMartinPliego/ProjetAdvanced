@@ -11,8 +11,8 @@ import Foundation
 struct LoginDTO: Codable {
     
     let uuid: String?
-    let userName: String?
-    let passwprd: String?
+    let username: String?
+    let password: String?
     let salt: String?
     let md5: String?
     let sha1: String?

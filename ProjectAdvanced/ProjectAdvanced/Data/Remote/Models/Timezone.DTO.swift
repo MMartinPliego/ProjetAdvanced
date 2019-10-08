@@ -1,5 +1,5 @@
 //
-//  DobDTO.swift
+//  Timezone.DTO.swift
 //  ProjectAdvanced
 //
 //  Created by Sheila Sarabia Sánchez on 08/10/2019.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct DobDTO: Codable {
-    let date: Date?
-    let age: Int?
+struct TimezoneDTO: Codable {
+    let offset: String?
+    let description: String?
     
 }

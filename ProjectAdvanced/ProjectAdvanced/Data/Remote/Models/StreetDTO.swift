@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct StreetDTO: Codable {
-    
+struct StreetDTO: Codable {    
     let number: Int?
     let name: String?
     

@@ -9,8 +9,7 @@
 import Foundation
 
 struct CoordinatesDTO: Codable {
-    
-    let longitud: String?
     let latitude: String?
+    let longitud: String?
     
 }

@@ -34,12 +34,13 @@
 		D9F46B1F2347C577009FBE23 /* NameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B1E2347C577009FBE23 /* NameDTO.swift */; };
 		D9F46B212347C5DB009FBE23 /* StreetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B202347C5DB009FBE23 /* StreetDTO.swift */; };
 		D9F46B232347C63C009FBE23 /* CoordinatesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B222347C63C009FBE23 /* CoordinatesDTO.swift */; };
-		D9F46B252347C6AE009FBE23 /* TimezonaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B242347C6AE009FBE23 /* TimezonaDTO.swift */; };
 		D9F46B272347C703009FBE23 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B262347C703009FBE23 /* LoginDTO.swift */; };
 		D9F46B2B2347C7D9009FBE23 /* RegisteredDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B2A2347C7D9009FBE23 /* RegisteredDTO.swift */; };
 		D9F46B2F2347C850009FBE23 /* PictureDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B2E2347C850009FBE23 /* PictureDTO.swift */; };
 		D9F46B332347CC72009FBE23 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B322347CC72009FBE23 /* DataManager.swift */; };
 		F116BB10234C632C00D3A4BB /* DobDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB0F234C632C00D3A4BB /* DobDTO.swift */; };
+		F116BB12234C68D000D3A4BB /* IdDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB11234C68D000D3A4BB /* IdDTO.swift */; };
+		F116BB14234C69B400D3A4BB /* Timezone.DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB13234C69B400D3A4BB /* Timezone.DTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,12 +74,13 @@
 		D9F46B1E2347C577009FBE23 /* NameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDTO.swift; sourceTree = "<group>"; };
 		D9F46B202347C5DB009FBE23 /* StreetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetDTO.swift; sourceTree = "<group>"; };
 		D9F46B222347C63C009FBE23 /* CoordinatesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesDTO.swift; sourceTree = "<group>"; };
-		D9F46B242347C6AE009FBE23 /* TimezonaDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezonaDTO.swift; sourceTree = "<group>"; };
 		D9F46B262347C703009FBE23 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		D9F46B2A2347C7D9009FBE23 /* RegisteredDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredDTO.swift; sourceTree = "<group>"; };
 		D9F46B2E2347C850009FBE23 /* PictureDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDTO.swift; sourceTree = "<group>"; };
 		D9F46B322347CC72009FBE23 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F116BB0F234C632C00D3A4BB /* DobDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobDTO.swift; sourceTree = "<group>"; };
+		F116BB11234C68D000D3A4BB /* IdDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdDTO.swift; sourceTree = "<group>"; };
+		F116BB13234C69B400D3A4BB /* Timezone.DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone.DTO.swift; sourceTree = "<group>"; };
 		F3E0431F66646819B8AE39F9 /* Pods-ProjectAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-ProjectAdvanced/Pods-ProjectAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,11 +241,12 @@
 				D9F46B1E2347C577009FBE23 /* NameDTO.swift */,
 				D9F46B202347C5DB009FBE23 /* StreetDTO.swift */,
 				D9F46B222347C63C009FBE23 /* CoordinatesDTO.swift */,
-				D9F46B242347C6AE009FBE23 /* TimezonaDTO.swift */,
 				D9F46B262347C703009FBE23 /* LoginDTO.swift */,
 				D9F46B2A2347C7D9009FBE23 /* RegisteredDTO.swift */,
 				D9F46B2E2347C850009FBE23 /* PictureDTO.swift */,
 				F116BB0F234C632C00D3A4BB /* DobDTO.swift */,
+				F116BB11234C68D000D3A4BB /* IdDTO.swift */,
+				F116BB13234C69B400D3A4BB /* Timezone.DTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,10 +390,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94136A7234523F100D4D71B /* SplashViewController.swift in Sources */,
-				D9F46B252347C6AE009FBE23 /* TimezonaDTO.swift in Sources */,
 				D9F46B212347C5DB009FBE23 /* StreetDTO.swift in Sources */,
 				D9F46B272347C703009FBE23 /* LoginDTO.swift in Sources */,
 				D9A5848A2346647100E65A86 /* PersonCollectionViewCell.swift in Sources */,
+				F116BB14234C69B400D3A4BB /* Timezone.DTO.swift in Sources */,
 				D9F46B232347C63C009FBE23 /* CoordinatesDTO.swift in Sources */,
 				D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */,
 				D9F46B132347B694009FBE23 /* UserDAO.swift in Sources */,
@@ -404,6 +407,7 @@
 				D9F46B1F2347C577009FBE23 /* NameDTO.swift in Sources */,
 				D9F46B1D2347C4D6009FBE23 /* LocationDTO.swift in Sources */,
 				D9F46B172347BF0D009FBE23 /* UserDTO.swift in Sources */,
+				F116BB12234C68D000D3A4BB /* IdDTO.swift in Sources */,
 				D9F46B2B2347C7D9009FBE23 /* RegisteredDTO.swift in Sources */,
 				D94136A3234523F100D4D71B /* AppDelegate.swift in Sources */,
 				D9948A8F234BAEBB0018252D /* ApiManager.swift in Sources */,

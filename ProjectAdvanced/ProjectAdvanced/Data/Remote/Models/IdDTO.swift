@@ -1,5 +1,5 @@
 //
-//  DobDTO.swift
+//  IdDTO.swift
 //  ProjectAdvanced
 //
 //  Created by Sheila Sarabia Sánchez on 08/10/2019.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct DobDTO: Codable {
-    let date: Date?
-    let age: Int?
-    
+struct IdDTO: Codable {
+    let name: String?
+    let valu: String?
 }
