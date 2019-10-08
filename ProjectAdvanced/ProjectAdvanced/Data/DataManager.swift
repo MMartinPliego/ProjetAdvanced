@@ -41,7 +41,7 @@ class DataManager {
                     // Eliminar todos los usuarios de la base de datos
                     DatabaseManager.shared.deleteAll()
                     //guardar los nuevos usuarios
-                    save(users: users)
+                    self?.save(users: users)
                     completion(.success(data: users))
                     
                 case .failure(let msg):
