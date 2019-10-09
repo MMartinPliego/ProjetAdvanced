@@ -1,0 +1,283 @@
+{
+    "results": [{
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Sansão",
+            "last": "Ferreira"
+        },
+        "location": {
+            "street": {
+                "number": 6631,
+                "name": "Rua Rio de Janeiro "
+            },
+            "city": "Sorocaba",
+            "state": "Pernambuco",
+            "country": "Brazil",
+            "postcode": 72113,
+            "coordinates": {
+                "latitude": "-71.7797",
+                "longitude": "-83.0037"
+            },
+            "timezone": {
+                "offset": "0:00",
+                "description": "Western Europe Time, London, Lisbon, Casablanca"
+            }
+        },
+        "email": "Sansao.Ferreira@example.com",
+        "login": {
+            "uuid": "d77a9dab-a7d2-4039-bd8f-32f6ed7c257d",
+            "username": "lazywolf315",
+            "password": "smeller",
+            "salt": "PBYkaoJn",
+            "md5": "b845e56e646e57047b44b901798b9625",
+            "sha1": "a39db9f181a3c28bb4b2c89d1739c83ade941eb7",
+            "sha256": "13d24d6428a4b685574e0fe5838a321e1a75e8e00486da97014ef72caf041b88"
+        },
+        "dob": {
+            "date": "1953-12-22T17:59:56.177Z",
+            "age": 66
+        },
+        "registered": {
+            "date": "2019-09-02T10:10:21.292Z",
+            "age": 0
+        },
+        "phone": "(98) 4713-4868",
+        "cell": "(53) 8631-4853",
+        "id": {
+            "name": "",
+            "value": null
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/41.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/41.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/41.jpg"
+        },
+        "nat": "BR"
+    }, {
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Patrick",
+            "last": "Rogstad"
+        },
+        "location": {
+            "street": {
+                "number": 6351,
+                "name": "Mogens Thorsens gate"
+            },
+            "city": "Vågåmo",
+            "state": "Nordland",
+            "postcode": "2488",
+            "coordinates": {
+                "latitude": "30.7680",
+                "longitude": "139.1769"
+            },
+            "timezone": {
+                "offset": "-12:00",
+                "description": "Eniwetok, Kwajalein"
+            }
+        },
+        "email": "Patrick.Rogstad@example.com",
+        "login": {
+            "uuid": "86da517d-95c6-4ba0-a9f8-aee08fa3b5dc",
+            "username": "smallrabbit629",
+            "password": "freak",
+            "salt": "36cG9PmQ",
+            "md5": "05ff3d7f6926ed13983c715cc5b1d418",
+            "sha1": "aa4a345c838ef3cfbc20323125d0883720a5fc5a",
+            "sha256": "fd90c3c4ad3395f634d0fc393f0dc5f81a33aaa6ed93b03a7d881d74fe2c6f1e"
+        },
+        "dob": {
+            "date": "1966-11-02T03:01:51.720Z",
+            "age": 53
+        },
+        "registered": {
+            "date": "2013-05-04T13:49:33.502Z",
+            "age": 6
+        },
+        "phone": "62143554",
+        "cell": "46857543",
+        "id": {
+            "name": "FN",
+            "value": "02116622966"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/81.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/81.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/81.jpg"
+        },
+        "nat": "NO"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "Mrs",
+            "first": "Samantha",
+            "last": "Richardson"
+        },
+        "location": {
+            "street": {
+                "number": 4931,
+                "name": "Herbert Road"
+            },
+            "city": "Clonmel",
+            "state": "Meath",
+            "country": "Ireland",
+            "postcode": 20625,
+            "coordinates": {
+                "latitude": "15.8960",
+                "longitude": "-32.3614"
+            },
+            "timezone": {
+                "offset": "+9:30",
+                "description": "Adelaide, Darwin"
+            }
+        },
+        "email": "Samantha.Richardson@example.com",
+        "login": {
+            "uuid": "ad942768-8729-4e8c-8752-849adc9e744a",
+            "username": "redzebra766",
+            "password": "wwwwww",
+            "salt": "EzYErcBn",
+            "md5": "1dedd320c33536c39325da4378f78238",
+            "sha1": "d23de5632ed59630a695e30e042fe9a40fd6684a",
+            "sha256": "2628a9b54d52b48a9170017bc2a1ac0ec839b0db0a42c2ea61d434763b4fa673"
+        },
+        "dob": {
+            "date": "1962-11-11T21:23:37.040Z",
+            "age": 57
+        },
+        "registered": {
+            "date": "2005-03-07T02:53:13.680Z",
+            "age": 14
+        },
+        "phone": "011-007-2244",
+        "cell": "081-967-0481",
+        "id": {
+            "name": "PPS",
+            "value": "6390476T"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/29.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/29.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/29.jpg"
+        },
+        "nat": "IE"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "Mrs",
+            "first": "Ella",
+            "last": "Bouchard"
+        },
+        "location": {
+            "street": {
+                "number": 6749,
+                "name": "Oak St"
+            },
+            "city": "Elgin",
+            "state": "Prince Edward Island",
+            "country": "Canada",
+            "postcode": "D3X 1W9",
+            "coordinates": {
+                "latitude": "-68.7493",
+                "longitude": "-2.8255"
+            },
+            "timezone": {
+                "offset": "-5:00",
+                "description": "Eastern Time (US & Canada), Bogota, Lima"
+            }
+        },
+        "email": "Ella.Bouchard@example.com",
+        "login": {
+            "uuid": "6c74073f-afb5-4240-91b3-377fac06e3b6",
+            "username": "yellowfrog967",
+            "password": "faggot",
+            "salt": "fIGeQuTd",
+            "md5": "48327194013e707917900c8d8811faec",
+            "sha1": "afa2535c709ffbba77eb2780951f1adf8aced513",
+            "sha256": "28b0355aae935e0f72aea0d675515b5b6059765e24da6560be16d3ae773063c6"
+        },
+        "dob": {
+            "date": "1973-02-25T06:36:08.002Z",
+            "age": 46
+        },
+        "registered": {
+            "date": "2012-05-16T23:39:17.575Z",
+            "age": 7
+        },
+        "phone": "625-096-5655",
+        "cell": "734-785-8781",
+        "id": {
+            "name": "",
+            "value": null
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/68.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/68.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/68.jpg"
+        },
+        "nat": "CA"
+    }, {
+        "gender": "female",
+        "name": {
+            "title": "Miss",
+            "first": "Eléna",
+            "last": "Brunet"
+        },
+        "location": {
+            "street": {
+                "number": 4878,
+                "name": "Rue de la Gare"
+            },
+            "city": "Reims",
+            "state": "Haute-Corse",
+            "country": "France",
+            "postcode": 51826,
+            "coordinates": {
+                "latitude": "85.2294",
+                "longitude": "-161.5275"
+            },
+            "timezone": {
+                "offset": "-3:30",
+                "description": "Newfoundland"
+            }
+        },
+        "email": "Elena.Brunet@example.com",
+        "login": {
+            "uuid": "6cb2c616-4aa4-4ce1-881a-5b15f4f89ba3",
+            "username": "crazyzebra167",
+            "password": "anton",
+            "salt": "ZWGZTTQi",
+            "md5": "d27ce7d8bff84d03179304d5ffa92032",
+            "sha1": "88037bf2d194e50d4820d38e4ffc468f9807601d",
+            "sha256": "4b51ef1a3be18a534c7b01f45bd9e727a8da1e68cc0f554847c136f08db7c549"
+        },
+        "dob": {
+            "date": "1955-10-09T00:28:34.124Z",
+            "age": 64
+        },
+        "registered": {
+            "date": "2005-11-16T00:59:52.009Z",
+            "age": 14
+        },
+        "phone": "01-31-05-55-73",
+        "cell": "06-21-78-45-07",
+        "id": {
+            "name": "INSEE",
+            "value": "2NNaN29713362 96"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/64.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/64.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/64.jpg"
+        },
+        "nat": "FR"
+    }],
+    "info": {
+        "seed": "42e1e70bcb686e79",
+        "results": 5,
+        "page": 1,
+        "version": "1.3"
+    }
+}

@@ -13,6 +13,7 @@
 		D94136A7234523F100D4D71B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94136A6234523F100D4D71B /* SplashViewController.swift */; };
 		D94136AA234523F100D4D71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94136A8234523F100D4D71B /* Main.storyboard */; };
 		D94136AF234523FD00D4D71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94136AD234523FD00D4D71B /* LaunchScreen.storyboard */; };
+		D98D12D9234E518200DA1836 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = D98D12D8234E518200DA1836 /* users.json */; };
 		D9948A8D234B891F0018252D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9948A8C234B891F0018252D /* DatabaseManager.swift */; };
 		D9948A8F234BAEBB0018252D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9948A8E234BAEBB0018252D /* ApiManager.swift */; };
 		D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94136AB234523FD00D4D71B /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		D94136AB234523FD00D4D71B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D94136AE234523FD00D4D71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D94136B0234523FD00D4D71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98D12D8234E518200DA1836 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		D9948A8C234B891F0018252D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D9948A8E234BAEBB0018252D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		D9A5847F23464B2900E65A86 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		D9A584752346446900E65A86 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D98D12D8234E518200DA1836 /* users.json */,
 				D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */,
 				D9F46B0D23479CF8009FBE23 /* lottie.json */,
 				D9F46B0B23479C50009FBE23 /* lottie2.json */,
@@ -347,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98D12D9234E518200DA1836 /* users.json in Resources */,
 				D94136AF234523FD00D4D71B /* LaunchScreen.storyboard in Resources */,
 				D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */,
 				D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */,

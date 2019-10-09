@@ -18,32 +18,35 @@ class UserViewController: UIViewController {
     
     // MARK: - Properties
     private var cellSpacing: CGFloat = 16.0
-    private var showUsers: Array<User> = []
+    private var users: Array<User> = []
     
     
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadUsers()
+    }
+    
+    private func loadUsers(){
         // traer los usuarios de la base de datos
         DataManager.shared.users() { [weak self] result in
             switch result {
+            //comprobar el tipo de devolución que esperamos (let data):
             case .success(let data):
                 guard let users = data as? Array<User> else {
                     return
                 }
-                self?.showUsers = users
-            
+                self?.users = users
+                
             case .failure(let msg):
                 print(msg)
                 
             }
             
         }
-
+        
     }
-    
-    
 }
 
 // MARK: - Extension Methods Table View -
@@ -57,7 +60,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +83,7 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
