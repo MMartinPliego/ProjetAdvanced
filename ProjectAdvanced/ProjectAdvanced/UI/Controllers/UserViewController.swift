@@ -9,20 +9,40 @@
 import UIKit
 
 class UserViewController: UIViewController {
-     
+    
     // MARK: - Outlets -
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmenOptions: UISegmentedControl!
-  
+    
     
     // MARK: - Properties
     private var cellSpacing: CGFloat = 16.0
+    private var showUsers: Array<User> = []
+    
     
     
     override func viewDidLoad() {
-          super.viewDidLoad()
-      }
+        super.viewDidLoad()
+        
+        // traer los usuarios de la base de datos
+        DataManager.shared.users() { [weak self] result in
+            switch result {
+            case .success(let data):
+                guard let users = data as? Array<User> else {
+                    return
+                }
+                self?.showUsers = users
+            
+            case .failure(let msg):
+                print(msg)
+                
+            }
+            
+        }
+
+    }
+    
     
 }
 
