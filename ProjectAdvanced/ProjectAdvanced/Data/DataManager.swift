@@ -16,6 +16,7 @@ class DataManager {
     static let shared = DataManager()
     private init() {}
     
+<<<<<<< HEAD
     
     func users(completion: @escaping ServiceCompletion) {
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -63,6 +64,41 @@ class DataManager {
                         DispatchQueue.main.async {
                             completion(.failure(msg: msg))
                         }
+=======
+    func users(completion: @escaping ServiceCompletion) {
+        let users = usersDB()
+        if usersDB().count > 0 {
+            //devolver userDB
+            completion(.success(data: users))
+        }
+        else{
+            //llamar al servicio y guardar usarios en la base de datos
+            usersForceUpdate(completion: completion)
+        }
+    }
+    
+    //llamar al servicio y guardar usarios en la base de datos
+    func usersForceUpdate(completion: @escaping ServiceCompletion) {
+        
+        //Hacer un hilo para ejecutar la llamada en segundo plano
+        DispatchQueue.global(qos: .background).async {
+            ApiManager.shared.fetchUsers() { [weak self] result in
+                switch result {
+                case .success(let data):
+                    guard let users = data as? UsersDTO else {
+                        completion(.failure(msg:"Mensaje error generico"))
+                        return
+                    }
+                    // Eliminar todos los usuarios de la base de datos
+                    DatabaseManager.shared.deleteAll()
+                    //guardar los nuevos usuarios
+                    self?.save(users: users)
+                    completion(.success(data: users))
+                    
+                case .failure(let msg):
+                    print("Fallo al obtener usuarios del Servicio: \(msg)")
+                    completion(.failure (msg: msg))
+>>>>>>> develop
                 }
             }
         }
