@@ -50,7 +50,6 @@ class UserViewController: UIViewController {
 }
 
 // MARK: - Extension Methods Table View -
-
 extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Configure tableView with default options
@@ -59,6 +58,7 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
     }
     
+    //número de celdas a poner en la tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
