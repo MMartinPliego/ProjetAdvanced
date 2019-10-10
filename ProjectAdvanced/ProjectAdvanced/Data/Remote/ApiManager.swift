@@ -21,52 +21,29 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     private let numUsers: Int = 100
-        
     
-    func fetchUsers(completion: ServiceCompletion) {
+    
+    private func fetchUsers(completion: ServiceCompletion) {
         // Llamar al servicio
-        
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let codingData = try decoder.decode(UserDTO.self, from: data)
-        let user = codingData.user
-        
-
-        
-        
-        
+        if let path = Bundle.main.path(forResource: "users", ofType: "json") {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path))
+                
+                let decoder = JSONDecoder()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd ´T´ HH:mm:ss.SSSZ"
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                
+                return try decoder.decode(UsersDTO.self, from: jsonData)
+            }
+            catch let error {
+                print("parse error: \(error.localizedDescription)")
+                return nil
+            }
+        }
+        else {
+            print("Invalid filename/path.")
+            return nil
+        }
     }
 }
-
-/*
- 
- func readJSONFromFile (fileName: String) -> Any? {
-     let json: UserDAO?
-     if let path = Bundle.main.path (forResource: fileName, ofType: "json") {
-         do {
-             let fileUrl = URL (fileURLWithPath: path)
-             
-             //Devolver datos
-             completion(.success(data: aqui la private func))
-         }
-     }
- }
- 
- 
-let decoder = JSONDecoder()
-decoder.keyDecodingStrategy = .convertFromSnakeCase
-let codingData = try decoder.decode(UserDTO.self, from: data)
-let user = codingData.user
-
- 
-let decoderJson = JSONDecoder()
-decoder.keyDecodingStrategy = .convertFromSnakeCase
-let userDAO = try decoder.decode(UserDTO.self, from: jsonData)
-
- 
-func decoderJson() {
-    decoder.keyDecodingStrategy = .convertFromSnakeCase
-    let viewJson = try decoder.decode(Decodable.Protocol, from: )
- }
- 
- /**/*/
