@@ -9,7 +9,7 @@
 import UIKit
 
 
-class PersonTableViewCell: UITableViewCell {
+class PersonTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
      static let cellIdentifier = String(describing: PersonTableViewCell.self)
     
         // MARK: - Outlets -
@@ -23,6 +23,10 @@ class PersonTableViewCell: UITableViewCell {
         mImage.image = nil
         mLabelName.text = nil
         mLabelEmail.text = nil
+        
+        //10.10.2019
+        let nib = UINib(nibName: "PersonTableViewCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "customCell")
     }
     
     override func awakeFromNib() {
@@ -38,6 +42,14 @@ class PersonTableViewCell: UITableViewCell {
         mLabelName.text = name
         mLabelEmail.text = email
     }
+    
+    //10.10.2019
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("customCell", forIndexPath: indexPath) as! PersonTableViewCell
+
+        return cell
+    }
+
 }
 
 
