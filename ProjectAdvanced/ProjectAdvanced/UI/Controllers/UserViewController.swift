@@ -15,6 +15,19 @@ class UserViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmenOptions: UISegmentedControl!
     
+    @IBAction func onListTypePressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            tableView.isHidden = false
+            collectionView.isHidden = true
+            tableView.reloadData()
+        default:
+            tableView.isHidden = true
+            collectionView.isHidden = false
+            collectionView.reloadData()
+        }
+    }
+    
     
     // MARK: - Properties
     private var cellSpacing: CGFloat = 16.0
@@ -25,6 +38,8 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure(tableView: tableView)
+        configureView(collectionView: collectionView)
         loadUsers()
     }
     
@@ -37,7 +52,14 @@ class UserViewController: UIViewController {
                 guard let users = data as? Array<User> else {
                     return
                 }
+                
                 self?.users = users
+                switch self?.segmenOptions.selectedSegmentIndex {
+                case 0:
+                    self?.tableView.reloadData()
+                default:
+                    self?.collectionView.reloadData()
+                }
                 
             case .failure(let msg):
                 print(msg)
@@ -54,6 +76,10 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Configure tableView with default options
     func configure(tableView: UITableView) {
+        tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
+                                 bundle: nil),
+                           forCellReuseIdentifier:
+            PersonTableViewCell.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -69,6 +95,13 @@ extension UserViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
+        if (indexPath.row < users.count) {
+            let user = users[indexPath.row]
+            cell .configureCell(image: user.avatar,
+                                name: user.name,
+                                email: user.email)
+        }
+        
         return cell
     }
 }
@@ -78,6 +111,12 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     /// Configure collectionView with default options
     func configureView(collectionView: UICollectionView) {
+        collectionView.register(UINib(nibName: PersonCollectionViewCell.cellIdentifier,
+                                 bundle: nil),
+                                forCellWithReuseIdentifier:
+            PersonCollectionViewCell.cellIdentifier)
+
+        
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -92,6 +131,12 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
+        if (indexPath.row < users.count) {
+                   let user = users[indexPath.row]
+                   cell .configureCell(image: user.avatar,
+                                       title: user.name)
+        }
+
         return cell
     }
     

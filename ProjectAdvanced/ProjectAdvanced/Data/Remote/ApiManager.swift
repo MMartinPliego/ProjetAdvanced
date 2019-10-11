@@ -37,15 +37,17 @@ class ApiManager {
        if let path = Bundle.main.path(forResource: "users", ofType: "json") {
            do {
                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path))
+            
                let decoder = JSONDecoder()
                let dateFormatter = DateFormatter()
                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            
                return try decoder.decode(UsersDTO.self, from: jsonData)
            }
             
            catch let error {
-               print("parse error: \(error.localizedDescription)")
+               print("parse Error: \(error.localizedDescription)")
                return nil
            }
        }

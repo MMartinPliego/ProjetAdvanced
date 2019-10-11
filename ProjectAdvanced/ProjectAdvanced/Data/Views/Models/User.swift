@@ -19,7 +19,17 @@ class User {
     let nationality: String?
     
     var name: String {
-        return"\(String(describing: firstName)) \(String(describing: lastName))"
+        var userName = ""
+        if let userFirstName = firstName {
+              userName += userFirstName
+              }
+        
+        if let userLastName = lastName {
+            userName += (userName.count > 0 ? "\(userLastName)":
+            userLastName)
+        }
+        
+        return"\(userName)"
     }
     
     // Devolver los años de los usuarios
