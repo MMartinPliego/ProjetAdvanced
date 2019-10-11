@@ -25,6 +25,7 @@
 		D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */; };
 		D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5848D2346659C00E65A86 /* UIView+Utils.swift */; };
 		D9AE815D234CEE9400D8C9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE815C234CEE9400D8C9A4 /* User.swift */; };
+		D9DAE9372350FD3E0090A612 /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE9362350FD3E0090A612 /* UserConfiguration.swift */; };
 		D9F46B0C23479C50009FBE23 /* lottie2.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0B23479C50009FBE23 /* lottie2.json */; };
 		D9F46B0E23479CF8009FBE23 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0D23479CF8009FBE23 /* lottie.json */; };
 		D9F46B1023479EE9009FBE23 /* lottie_bueno.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */; };
@@ -67,6 +68,7 @@
 		D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9A5848D2346659C00E65A86 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D9AE815C234CEE9400D8C9A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D9DAE9362350FD3E0090A612 /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
 		D9F46B0B23479C50009FBE23 /* lottie2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie2.json; sourceTree = "<group>"; };
 		D9F46B0D23479CF8009FBE23 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lottie.json; path = ../../../../../lottie.json; sourceTree = "<group>"; };
 		D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_bueno.json; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D9948A8C234B891F0018252D /* DatabaseManager.swift */,
+				D9DAE9362350FD3E0090A612 /* UserConfiguration.swift */,
 				D9A5847C234644AE00E65A86 /* Models */,
 			);
 			path = Local;
@@ -421,6 +424,7 @@
 				D9F46B232347C63C009FBE23 /* CoordinatesDTO.swift in Sources */,
 				D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */,
 				D9F46B132347B694009FBE23 /* UserDAO.swift in Sources */,
+				D9DAE9372350FD3E0090A612 /* UserConfiguration.swift in Sources */,
 				D9F46B1B2347C26D009FBE23 /* UsersDTO.swift in Sources */,
 				D9F46B332347CC72009FBE23 /* DataManager.swift in Sources */,
 				D9F46B2F2347C850009FBE23 /* PictureDTO.swift in Sources */,

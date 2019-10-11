@@ -25,7 +25,7 @@ class User {
               }
         
         if let userLastName = lastName {
-            userName += (userName.count > 0 ? "\(userLastName)":
+            userName += (userName.count > 0 ? " \(userLastName)":
             userLastName)
         }
         

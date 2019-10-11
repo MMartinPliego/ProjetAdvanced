@@ -45,7 +45,7 @@ class UserViewController: UIViewController {
     
     private func loadUsers(){
         // traer los usuarios de la base de datos
-        DataManager.shared.users() { [weak self] result in
+        DataManager.shared.usersForceUpdate() { [weak self] result in
             switch result {
             //comprobar el tipo de devolución que esperamos (let data):
             case .success(let data):
@@ -73,15 +73,23 @@ class UserViewController: UIViewController {
 
 // MARK: - Extension Methods Table View -
 extension UserViewController: UITableViewDataSource, UITableViewDelegate {
-    
+
     /// Configure tableView with default options
     func configure(tableView: UITableView) {
+        
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier:
             PersonTableViewCell.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
+        // para añadir margen superior al TableView
+        self.tableView.contentInset = UIEdgeInsets(top: segmenOptions.frame.origin.y + segmenOptions.bounds.height,
+                                                   left: 0,
+                                                   bottom: 0,
+                                                   right: 0)
+        
+        //self.cellSpacing
     }
     
     //número de celdas a poner en la tableView
@@ -119,6 +127,11 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        // para añadir margen superior al CollectionView
+        self.collectionView.contentInset = UIEdgeInsets(top: segmenOptions.frame.origin.y + segmenOptions.bounds.height,
+                                                        left: 0,
+                                                        bottom: 0,
+                                                        right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
