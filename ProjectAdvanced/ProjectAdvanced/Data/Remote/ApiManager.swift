@@ -24,7 +24,7 @@ class ApiManager {
     
     private let url_users = "https://randomuser.me/api/"
     private let serviceKeyResults: String = "results"
-    private let serviceResultCount: Int = 50
+    private let serviceResultCount: Int = 500
     private let serviceResultDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     
     private var testLoadUsersJson: UsersDTO? {
@@ -36,6 +36,7 @@ class ApiManager {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                let encoder = JSONEncoder(); encoder.outputFormatting = .sortedKeys
                 
                 return try decoder.decode(UsersDTO.self, from: jsonData)
             }
@@ -63,10 +64,14 @@ class ApiManager {
                     decoder.dateDecodingStrategy = .formatted(dateFormatter)
                     
                     let users: UsersDTO? = try? decoder.decode(UsersDTO.self, from: responseData)
-                    completion(.success(data: users))
+                    //actualizar la lista de users por fecha de nacimiento de mayor a menor
+                    let usersOrdered = users?.users?.sorted(by: {$0.dob?.age ?? 0 > $1.dob?.age ?? 0})
+                    
+                    completion(.success(data: UsersDTO(users: usersOrdered,
+                                                      info: users?.info)))
                 }
                 else {
-                    completion(.failure(msg: "Error"))
+                    completion(.failure(msg: "Error en petición al servicio"))
                     
                 }
                             
@@ -75,6 +80,9 @@ class ApiManager {
     }
     
 }
+
+
+
 
 
 /*
