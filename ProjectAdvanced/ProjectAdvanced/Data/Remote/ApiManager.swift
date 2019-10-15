@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 
 enum ServiceResult {
     case success(data: Any?)
@@ -22,7 +22,11 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     
-    private let numUsers: Int = 100
+    private let url_users = "https://randomuser.me/api/"
+    private let serviceKeyResults: String = "results"
+    private let serviceResultCount: Int = 50
+    private let serviceResultDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    
     private var testLoadUsersJson: UsersDTO? {
         if let path = Bundle.main.path(forResource: "users", ofType: "json") {
             do {
@@ -46,12 +50,30 @@ class ApiManager {
         }
     }
     
-    func fetchUsers(completion: ServiceCompletion) {
-        // Llamar al servicio
+    // Llamar al servicio
+    func fetchUsers(completion: @escaping ServiceCompletion) {
+        Alamofire.request(url_users,
+                          method: .get,
+                          parameters: [serviceKeyResults: serviceResultCount],
+                          encoding: URLEncoding.queryString) .response { [weak self] response in
+                if let responseData = response.data {
+                    let decoder = JSONDecoder()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = self?.serviceResultDateFormat
+                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                    
+                    let users: UsersDTO? = try? decoder.decode(UsersDTO.self, from: responseData)
+                    completion(.success(data: users))
+                }
+                else {
+                    completion(.failure(msg: "Error"))
+                    
+                }
+                            
+        }
         
-        // Devolver datos
-        completion(.success(data: testLoadUsersJson))
     }
+    
 }
 
 

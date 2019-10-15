@@ -9,7 +9,6 @@
 import Foundation
 
 struct RegisteredDTO: Codable {
-    
     let dateRegistered: Double?
     let ageRegistered: Double?
     
