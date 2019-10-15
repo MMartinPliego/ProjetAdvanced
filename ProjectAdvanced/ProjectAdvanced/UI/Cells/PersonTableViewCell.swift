@@ -1,45 +1,49 @@
 //
-//  PersonViewCell.swift
-//  ProjectAdvanced
+//  PersonTableViewCell.swift
+//  CursoIOSAdvanced
 //
-//  Created by PersonTableViewCell.swift on 03/10/2019.
-//  Copyright © 2019 Orum Games. All rights reserved.
+//  Created by David Jardon on 03/10/2019.
+//  Copyright © 2019 David Jardon. All rights reserved.
 //
 
 import UIKit
 import Kingfisher
 
-class PersonTableViewCell: UITableViewCell {
-     static let cellIdentifier = String(describing: PersonTableViewCell.self)
 
-    
-        // MARK: - Outlets -
+class PersonTableViewCell: UITableViewCell {
+    static let cellIdentifier = String(describing: PersonTableViewCell.self)
+
     @IBOutlet weak var mView: UIView!
     @IBOutlet weak var mImage: UIImageView!
     @IBOutlet weak var mLabelName: UILabel!
     @IBOutlet weak var mLabelEmail: UILabel!
+    @IBOutlet weak var mLabelBirthdate: UILabel!
     
-        // MARK: - Lifecycle -
+    
     override func prepareForReuse() {
         mImage.image = nil
         mLabelName.text = nil
         mLabelEmail.text = nil
+        mLabelBirthdate.text = nil
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        mView.layer.cornerRadius = 6.0
+        mView.layer.cornerRadius = 8.0
         mView.configureShadows()
     }
     
-        // MARK: - Configure methods -
-    func configureCell(image: String? = nil, name: String? = nil, email: String? = nil) {
+    func configureCell(image: String? = nil, name: String? = nil, subtitle: String? = nil, birthdate: Date? = nil) {
         let url = URL(string: image ?? "")
         mImage.kf.setImage(with: url)
         mLabelName.text = name
-        mLabelEmail.text = email
+        mLabelEmail.text = subtitle
+        
+        if let birthdateValue = birthdate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            mLabelBirthdate.text = dateFormatter.string(from: birthdateValue)
+        }
     }
-
 }
-
