@@ -2,8 +2,8 @@
 //  PersonTableViewCell.swift
 //  CursoIOSAdvanced
 //
-//  Created by David Jardon on 03/10/2019.
-//  Copyright © 2019 David Jardon. All rights reserved.
+//  Created by Manuel Martín on 03/10/2019.
+//  Copyright © 2019 Manuel Martín. All rights reserved.
 //
 
 import UIKit

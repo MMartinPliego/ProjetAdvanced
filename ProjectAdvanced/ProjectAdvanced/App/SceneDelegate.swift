@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  ProjectAdvanced
 //
-//  Created by Dev2 on 02/10/2019.
-//  Copyright © 2019 Orum Games. All rights reserved.
+//  Created by Manuel Martín on 02/10/2019.
+//  Copyright © 2019 Manuel Martín. All rights reserved.
 //
 
 import UIKit
