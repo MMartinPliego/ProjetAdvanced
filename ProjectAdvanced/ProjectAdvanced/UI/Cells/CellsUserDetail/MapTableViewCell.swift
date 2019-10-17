@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
 class MapTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var mLabelMap: UILabel!
+    @IBOutlet weak var mMap: MKMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

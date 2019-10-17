@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t61-Cm-XgV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t61-Cm-XgV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -83,16 +83,54 @@
                                             <outlet property="mView" destination="rR6-1h-O95" id="tXp-pb-QGF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapTableViewCell" id="XUk-ea-SOu" customClass="MapTableViewCell" customModule="ProjectAdvanced" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapTableViewCell" rowHeight="244" id="XUk-ea-SOu" customClass="MapTableViewCell" customModule="ProjectAdvanced" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="414" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XUk-ea-SOu" id="ibc-Cl-Jw7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYM-US-JHo">
+                                                    <rect key="frame" x="40" y="19" width="334" height="206"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="56C-73-Rmw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="206"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mapa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRT-f6-3jW">
+                                                                    <rect key="frame" x="150" y="0.0" width="34.5" height="26"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="327-JX-CUB">
+                                                                    <rect key="frame" x="47" y="34" width="240" height="172"/>
+                                                                </mapView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="56C-73-Rmw" secondAttribute="trailing" id="4DP-fl-udg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="56C-73-Rmw" secondAttribute="bottom" id="DPb-Pe-D6I"/>
+                                                        <constraint firstItem="56C-73-Rmw" firstAttribute="leading" secondItem="SYM-US-JHo" secondAttribute="leading" id="Whc-Ja-xqM"/>
+                                                        <constraint firstItem="56C-73-Rmw" firstAttribute="top" secondItem="SYM-US-JHo" secondAttribute="top" id="hQM-e3-H4q"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SYM-US-JHo" firstAttribute="leading" secondItem="ibc-Cl-Jw7" secondAttribute="leadingMargin" constant="20" id="2sw-Ge-tT7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SYM-US-JHo" secondAttribute="trailing" constant="20" id="Uob-gR-VZy"/>
+                                                <constraint firstItem="SYM-US-JHo" firstAttribute="top" secondItem="ibc-Cl-Jw7" secondAttribute="topMargin" constant="8" id="lRz-Sd-K7O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SYM-US-JHo" secondAttribute="bottom" constant="8" id="oE0-tI-IFy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mLabelMap" destination="aRT-f6-3jW" id="Dq2-nO-c4e"/>
+                                            <outlet property="mMap" destination="327-JX-CUB" id="HbC-8U-wpy"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryTableViewCell" rowHeight="150" id="djw-fl-Pqf" customClass="CountryTableViewCell" customModule="ProjectAdvanced" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="251.5" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="452" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="djw-fl-Pqf" id="Brt-hZ-sfR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -141,7 +179,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactDataTableViewCell" rowHeight="164" id="eSc-zR-mGB" customClass="ContactDataTableViewCell" customModule="ProjectAdvanced" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="401.5" width="414" height="164"/>
+                                        <rect key="frame" x="0.0" y="602" width="414" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSc-zR-mGB" id="KXq-zb-Ddj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
@@ -208,6 +246,9 @@
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onActionPressed:" destination="aSf-99-y7K" eventType="touchUpInside" id="57n-fB-051"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -216,8 +257,8 @@
                             <constraint firstItem="t61-Cm-XgV" firstAttribute="leading" secondItem="yst-rZ-aor" secondAttribute="leading" id="Bqg-29-xeZ"/>
                             <constraint firstItem="yst-rZ-aor" firstAttribute="trailing" secondItem="VOV-Hf-XPj" secondAttribute="trailing" constant="50" id="bEl-Os-8bm"/>
                             <constraint firstItem="yst-rZ-aor" firstAttribute="trailing" secondItem="t61-Cm-XgV" secondAttribute="trailing" id="cdU-76-DTL"/>
+                            <constraint firstItem="VOV-Hf-XPj" firstAttribute="bottom" secondItem="yst-rZ-aor" secondAttribute="bottom" id="fDA-B4-zbX"/>
                             <constraint firstItem="yst-rZ-aor" firstAttribute="bottom" secondItem="t61-Cm-XgV" secondAttribute="bottom" id="q4f-Wm-J5k"/>
-                            <constraint firstItem="VOV-Hf-XPj" firstAttribute="bottom" secondItem="yst-rZ-aor" secondAttribute="bottom" id="rAd-T0-3Kv"/>
                             <constraint firstItem="VOV-Hf-XPj" firstAttribute="leading" secondItem="yst-rZ-aor" secondAttribute="leading" constant="50" id="uXd-8M-Ktw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yst-rZ-aor"/>

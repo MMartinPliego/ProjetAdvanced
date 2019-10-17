@@ -19,9 +19,17 @@ class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func onActionPressed (_ sender:UIButton)  {
+    }
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    var user: User? = nil
+    
+    func configureViewDetail() {
+        
     }
 }
 

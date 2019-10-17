@@ -17,6 +17,11 @@ class User {
     let birthdate: Date?
     let country: String?
     let nationality: String?
+    let gender: String?
+    let city: String?
+    let street: String?
+    let cell: Int?
+    let timezone: String?
     
     var name: String {
         var userName = ""
@@ -53,7 +58,12 @@ class User {
          email: String? = nil,
          birthdate: Date? = nil,
          country: String? = nil,
-         nationality: String? = nil) {
+         nationality: String? = nil,
+         city: String? = nil,
+         street: String? = nil,
+         gender: String? = nil,
+         cell: Int? = nil,
+         timezone: String? = nil) {
         
         self.id = id
         self.avatar = avatar
@@ -63,6 +73,11 @@ class User {
         self.birthdate = birthdate
         self.country = country
         self.nationality = nationality
+        self.city = city
+        self.street = street
+        self.gender = gender
+        self.cell = cell
+        self.timezone = timezone
     }
     
 }

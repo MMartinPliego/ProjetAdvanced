@@ -113,14 +113,6 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "UserDetailViewController", sender: indexPath)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? UserDetailViewController,
-            let cell = sender as? IndexPath else {
-                return
-        }
-        //destination.UserDetailViewController = Userdetail[IndexPath]
-
-    }
     
     func configure(tableView: UITableView) {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
@@ -163,7 +155,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Extension CollectionView methods
 extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     /// Configure collectionView with default options
-    func collectionView(_ collectionview: UICollectionView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "UserDetailViewController", sender: indexPath)
     }
     
@@ -215,6 +207,19 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let size = (collectionView.frame.size.width - cellSpacing) / 2
         return CGSize(width: size,
                       height: size)
+    }
+    
+}
+
+extension UsersViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? UserDetailViewController,
+            let indexPath = sender as? IndexPath else {
+                return
+        }
+        
+        destination.user = users[indexPath.row]
     }
     
 }
