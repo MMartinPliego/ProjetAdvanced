@@ -9,9 +9,6 @@
 import UIKit
 
 
-import UIKit
-
-
 class UsersViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -112,6 +109,19 @@ class UsersViewController: UIViewController {
 // MARK: - Extension TableView methods
 extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     /// Configure tableView with default options
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "UserDetailViewController", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? UserDetailViewController,
+            let cell = sender as? IndexPath else {
+                return
+        }
+        //destination.UserDetailViewController = Userdetail[IndexPath]
+
+    }
+    
     func configure(tableView: UITableView) {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
@@ -153,6 +163,10 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Extension CollectionView methods
 extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     /// Configure collectionView with default options
+    func collectionView(_ collectionview: UICollectionView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "UserDetailViewController", sender: indexPath)
+    }
+    
     func configure(collectionView: UICollectionView) {
         collectionView.register(UINib(nibName: PersonCollectionViewCell.cellIdentifier,
                                       bundle: nil),
@@ -202,4 +216,5 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: size,
                       height: size)
     }
+    
 }

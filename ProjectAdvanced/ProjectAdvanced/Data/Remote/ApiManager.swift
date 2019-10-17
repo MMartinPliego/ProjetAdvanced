@@ -24,7 +24,7 @@ class ApiManager {
     
     private let url_users = "https://randomuser.me/api/"
     private let serviceKeyResults: String = "results"
-    private let serviceResultCount: Int = 500
+    private let serviceResultCount: Int = 6
     private let serviceResultDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     
     private var testLoadUsersJson: UsersDTO? {

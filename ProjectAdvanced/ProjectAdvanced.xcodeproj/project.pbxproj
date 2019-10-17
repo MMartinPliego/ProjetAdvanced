@@ -16,6 +16,12 @@
 		D98D12D9234E518200DA1836 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = D98D12D8234E518200DA1836 /* users.json */; };
 		D9948A8D234B891F0018252D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9948A8C234B891F0018252D /* DatabaseManager.swift */; };
 		D9948A8F234BAEBB0018252D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9948A8E234BAEBB0018252D /* ApiManager.swift */; };
+		D997C0FC23575FAA00C33C01 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C0FA23575FAA00C33C01 /* MapTableViewCell.swift */; };
+		D997C10023575FC200C33C01 /* PersonalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C0FE23575FC200C33C01 /* PersonalDataTableViewCell.swift */; };
+		D997C10423575FD100C33C01 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C10223575FD100C33C01 /* CountryTableViewCell.swift */; };
+		D997C10823575FE700C33C01 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C10623575FE700C33C01 /* ContactDataTableViewCell.swift */; };
+		D997C10B2357611700C33C01 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C10A2357611700C33C01 /* UserDetailViewController.swift */; };
+		D997C10D2357649100C33C01 /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D997C10C2357649100C33C01 /* UserDetail.storyboard */; };
 		D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94136AB234523FD00D4D71B /* Assets.xcassets */; };
 		D9A5848023464B2900E65A86 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A5847F23464B2900E65A86 /* Splash.storyboard */; };
 		D9A584822346512E00E65A86 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A584812346512E00E65A86 /* UserViewController.swift */; };
@@ -25,6 +31,7 @@
 		D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */; };
 		D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5848D2346659C00E65A86 /* UIView+Utils.swift */; };
 		D9AE815D234CEE9400D8C9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE815C234CEE9400D8C9A4 /* User.swift */; };
+		D9D051392358C29A005D1FA8 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D051382358C29A005D1FA8 /* UserDetail.swift */; };
 		D9F46B0C23479C50009FBE23 /* lottie2.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0B23479C50009FBE23 /* lottie2.json */; };
 		D9F46B0E23479CF8009FBE23 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0D23479CF8009FBE23 /* lottie.json */; };
 		D9F46B1023479EE9009FBE23 /* lottie_bueno.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */; };
@@ -59,6 +66,12 @@
 		D98D12D8234E518200DA1836 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		D9948A8C234B891F0018252D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D9948A8E234BAEBB0018252D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D997C0FA23575FAA00C33C01 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		D997C0FE23575FC200C33C01 /* PersonalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataTableViewCell.swift; sourceTree = "<group>"; };
+		D997C10223575FD100C33C01 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		D997C10623575FE700C33C01 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
+		D997C10A2357611700C33C01 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		D997C10C2357649100C33C01 /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
 		D9A5847F23464B2900E65A86 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		D9A584812346512E00E65A86 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D9A58483234662AE00E65A86 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +80,7 @@
 		D9A584892346647100E65A86 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9A5848D2346659C00E65A86 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D9AE815C234CEE9400D8C9A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D9D051382358C29A005D1FA8 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		D9F46B0B23479C50009FBE23 /* lottie2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie2.json; sourceTree = "<group>"; };
 		D9F46B0D23479CF8009FBE23 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lottie.json; path = ../../../../../lottie.json; sourceTree = "<group>"; };
 		D9F46B0F23479EE9009FBE23 /* lottie_bueno.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_bueno.json; sourceTree = "<group>"; };
@@ -131,6 +145,17 @@
 			path = ProjectAdvanced;
 			sourceTree = "<group>";
 		};
+		D997C0F523575EE600C33C01 /* CellsUserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D997C0FE23575FC200C33C01 /* PersonalDataTableViewCell.swift */,
+				D997C0FA23575FAA00C33C01 /* MapTableViewCell.swift */,
+				D997C10223575FD100C33C01 /* CountryTableViewCell.swift */,
+				D997C10623575FE700C33C01 /* ContactDataTableViewCell.swift */,
+			);
+			path = CellsUserDetail;
+			sourceTree = "<group>";
+		};
 		D9A584742346445D00E65A86 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +203,7 @@
 			children = (
 				D9A584812346512E00E65A86 /* UserViewController.swift */,
 				D94136A6234523F100D4D71B /* SplashViewController.swift */,
+				D997C10A2357611700C33C01 /* UserDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +231,7 @@
 				D94136AD234523FD00D4D71B /* LaunchScreen.storyboard */,
 				D9A5847F23464B2900E65A86 /* Splash.storyboard */,
 				D94136A8234523F100D4D71B /* Main.storyboard */,
+				D997C10C2357649100C33C01 /* UserDetail.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -212,6 +239,7 @@
 		D9A58487234662D700E65A86 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D997C0F523575EE600C33C01 /* CellsUserDetail */,
 				D9A58483234662AE00E65A86 /* PersonTableViewCell.swift */,
 				D9A58484234662AE00E65A86 /* PersonTableViewCell.xib */,
 				D9A584882346647100E65A86 /* PersonCollectionViewCell.swift */,
@@ -240,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				D9AE815C234CEE9400D8C9A4 /* User.swift */,
+				D9D051382358C29A005D1FA8 /* UserDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98D12D9234E518200DA1836 /* users.json in Resources */,
+				D997C10D2357649100C33C01 /* UserDetail.storyboard in Resources */,
 				D94136AF234523FD00D4D71B /* LaunchScreen.storyboard in Resources */,
 				D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */,
 				D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */,
@@ -424,16 +454,22 @@
 				D9F46B1B2347C26D009FBE23 /* UsersDTO.swift in Sources */,
 				D9F46B332347CC72009FBE23 /* DataManager.swift in Sources */,
 				D9F46B2F2347C850009FBE23 /* PictureDTO.swift in Sources */,
+				D997C10823575FE700C33C01 /* ContactDataTableViewCell.swift in Sources */,
+				D997C10423575FD100C33C01 /* CountryTableViewCell.swift in Sources */,
 				F116BB10234C632C00D3A4BB /* DobDTO.swift in Sources */,
 				D9948A8D234B891F0018252D /* DatabaseManager.swift in Sources */,
 				D9A58485234662AE00E65A86 /* PersonTableViewCell.swift in Sources */,
+				D997C10023575FC200C33C01 /* PersonalDataTableViewCell.swift in Sources */,
 				D9A584822346512E00E65A86 /* UserViewController.swift in Sources */,
 				D9F46B1F2347C577009FBE23 /* NameDTO.swift in Sources */,
 				D9F46B1D2347C4D6009FBE23 /* LocationDTO.swift in Sources */,
 				D9F46B172347BF0D009FBE23 /* UserDTO.swift in Sources */,
+				D9D051392358C29A005D1FA8 /* UserDetail.swift in Sources */,
 				F116BB12234C68D000D3A4BB /* IdDTO.swift in Sources */,
 				D9F46B2B2347C7D9009FBE23 /* RegisteredDTO.swift in Sources */,
 				D94136A3234523F100D4D71B /* AppDelegate.swift in Sources */,
+				D997C0FC23575FAA00C33C01 /* MapTableViewCell.swift in Sources */,
+				D997C10B2357611700C33C01 /* UserDetailViewController.swift in Sources */,
 				D9948A8F234BAEBB0018252D /* ApiManager.swift in Sources */,
 				D94136A5234523F100D4D71B /* SceneDelegate.swift in Sources */,
 				D9F46B192347C0F2009FBE23 /* InfoDTO.swift in Sources */,
