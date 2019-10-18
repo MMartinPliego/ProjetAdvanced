@@ -19,9 +19,12 @@ class User {
     let nationality: String?
     let gender: String?
     let city: String?
-    let street: String?
-    let cell: Int?
-    let timezone: String?
+    let phone: String?
+    let cell: String?
+    let timezoneDescription: String?
+    let timezoneOffset: String?
+    let streetName: String?
+    let streetNumber: String?
     
     var name: String {
         var userName = ""
@@ -35,6 +38,32 @@ class User {
         }
         
         return"\(userName)"
+    }
+    
+    var timezone: String {
+        var userTimezone = ""
+        if let userTimezoneDescription = timezoneDescription {
+            userTimezone += userTimezoneDescription
+        }
+        
+        if let userTimezoneOffset = timezoneOffset {
+            userTimezone += userTimezoneOffset
+        }
+        
+        return "\(userTimezone)"
+    }
+    
+    var street: String {
+        var userStreet = ""
+        if let userStreetName = streetName {
+            userStreet += userStreetName
+        }
+        
+        if let userStreetNumber = streetNumber {
+            userStreet += userStreetNumber
+        }
+        
+        return "\(userStreet)"
     }
     
     // Devolver los años de los usuarios
@@ -60,10 +89,13 @@ class User {
          country: String? = nil,
          nationality: String? = nil,
          city: String? = nil,
-         street: String? = nil,
          gender: String? = nil,
-         cell: Int? = nil,
-         timezone: String? = nil) {
+         phone: String? = nil,
+         cell: String? = nil,
+         timezoneDescription: String? = nil,
+         timezoneOffset: String? = nil,
+         streetName: String? = nil,
+         streetNumber: String? = nil) {
         
         self.id = id
         self.avatar = avatar
@@ -74,10 +106,13 @@ class User {
         self.country = country
         self.nationality = nationality
         self.city = city
-        self.street = street
         self.gender = gender
+        self.phone = phone
         self.cell = cell
-        self.timezone = timezone
+        self.timezoneDescription = timezoneDescription
+        self.timezoneOffset = timezoneOffset
+        self.streetName = streetName
+        self.streetNumber = streetNumber
     }
     
 }

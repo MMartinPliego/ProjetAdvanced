@@ -9,6 +9,7 @@
 import UIKit
 
 class ContactDataTableViewCell: UITableViewCell {
+    static let cellIdentifier = String(describing: ContactDataTableViewCell.self)
     
     
     @IBOutlet weak var mView: UIView!
@@ -16,6 +17,13 @@ class ContactDataTableViewCell: UITableViewCell {
     @IBOutlet weak var mCell: UILabel!
     @IBOutlet weak var mEmail: UILabel!
     @IBOutlet weak var mTimezone: UILabel!
+    
+    override func prepareForReuse() {
+        mPhone.text = nil
+        mCell.text = nil
+        mEmail.text = nil
+        mTimezone.text = nil
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,4 +36,10 @@ class ContactDataTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(phone: String? = nil, cell: String? = nil, email: String? = nil, timezone: String? = nil) {
+        mPhone.text = phone
+        mCell.text = cell
+        mEmail.text = email
+        mTimezone.text = timezone
+    }
 }

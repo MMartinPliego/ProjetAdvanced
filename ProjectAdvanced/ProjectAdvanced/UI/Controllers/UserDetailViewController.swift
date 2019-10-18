@@ -21,9 +21,13 @@ class UserDetailViewController: UIViewController {
     
     @IBAction func onActionPressed (_ sender:UIButton)  {
     }
+    
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure(tableView: tableView)
     }
     
     var user: User? = nil
@@ -37,9 +41,6 @@ class UserDetailViewController: UIViewController {
 extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     /// Configure tableView with default options
     func configure(tableView: UITableView) {
-       
-        //Poner botón separado de la tabla para que no tape el contenido de la parte inferior
-        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -48,21 +49,44 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
         return 4
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Aquí hacer el case para que entre en la celda correspondiente
         
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
-            return PersonalDataTableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier, for: indexPath) as? PersonalDataTableViewCell {
+                cell.configureCell(image: user?.avatar, name: user?.firstName, nat: user?.nationality, gender: user?.gender)
+                return cell
+            }
+            return UITableViewCell()
+            
         case 1:
-            return MapTableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: MapTableViewCell.cellIdentifier, for: indexPath) as? MapTableViewCell {
+                return cell
+                
+            }
+            return UITableViewCell()
+            
         case 2:
-            return CountryTableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.cellIdentifier, for: indexPath) as? CountryTableViewCell {
+                cell.configureCell(country: user?.country, city: user?.city, street: user?.streetName)
+                return cell
+            }
+            return UITableViewCell()
+            
         default:
-            return ContactDataTableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: ContactDataTableViewCell.cellIdentifier, for: indexPath) as? ContactDataTableViewCell {
+                cell.configureCell(phone: user?.phone, cell: user?.cell, email: user?.email, timezone: user?.timezone)
+                return cell
+            }
+            return UITableViewCell()
         }
         
     }
-
     
 }

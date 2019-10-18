@@ -139,7 +139,15 @@ class DataManager {
                              country: user.location?.country,
                              latitude: user.location?.coordinates?.latitude,
                              longitude: user.location?.coordinates?.longitude,
-                             nationality: user.nat)
+                             nationality: user.nat,
+                             timezoneDescription: user.timezone?.description,
+                             timezoneOffset: user.timezone?.offset,
+                             cell: user.cell,
+                             phone: user.phone,
+                             city: user.location?.city,
+                             streetName: user.location?.street?.name)
+        
+
         
         DatabaseManager.shared.save(user: userDB)
     }
@@ -151,13 +159,21 @@ class DataManager {
     }
     
     private func user(from userDAO: UserDAO) -> User {
-         return User(id: userDAO.uuid,
-                     avatar: userDAO.avatar,
-                     firstName: userDAO.firstName,
-                     lastname: userDAO.lastName,
-                     email: userDAO.email,
-                     birthdate: userDAO.birthdate,
-                     country: userDAO.country,
-                     nationality: userDAO.nationality)
-     }
+        return User(id: userDAO.uuid,
+                    avatar: userDAO.avatar,
+                    firstName: userDAO.firstName,
+                    lastname: userDAO.lastName,
+                    email: userDAO.email,
+                    birthdate: userDAO.birthdate,
+                    country: userDAO.country,
+                    nationality: userDAO.nationality,
+                    city: userDAO.city,
+                    gender: userDAO.gender,
+                    phone: userDAO.phone,
+                    cell: userDAO.cell,
+                    timezoneDescription: userDAO.timezoneDescription,
+                    timezoneOffset: userDAO.timezoneOffset,
+                    streetName: userDAO.streetName)
+    }
 }
+

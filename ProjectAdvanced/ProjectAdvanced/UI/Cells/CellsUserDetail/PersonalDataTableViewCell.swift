@@ -28,14 +28,10 @@ class PersonalDataTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        mView.layer.cornerRadius = 8.0
-        mView.configureShadows()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     //MARK: - Configure Methods

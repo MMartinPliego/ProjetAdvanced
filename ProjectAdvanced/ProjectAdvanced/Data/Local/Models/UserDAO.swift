@@ -21,6 +21,13 @@ class UserDAO: Object {
     @objc dynamic var latitude: String?
     @objc dynamic var longitude: String?
     @objc dynamic var nationality: String?
+    @objc dynamic var timezoneDescription: String?
+    @objc dynamic var timezoneOffset: String?
+    @objc dynamic var cell: String?
+    @objc dynamic var phone: String?
+    @objc dynamic var city: String?
+    @objc dynamic var streetName: String?
+    @objc dynamic var streetNumber: String?
 
 
     override class func primaryKey() -> String? {
@@ -37,7 +44,14 @@ class UserDAO: Object {
                      country: String? = nil,
                      latitude: String? = nil,
                      longitude: String? = nil,
-                     nationality: String? = nil) {
+                     nationality: String? = nil,
+                     timezoneDescription: String? = nil,
+                     timezoneOffset: String? = nil,
+                     cell: String? = nil,
+                     phone: String? = nil,
+                     city: String? = nil,
+                     streetName: String? = nil,
+                     streetNumber: String? = nil) {
         
         self.init ()
         
@@ -52,6 +66,13 @@ class UserDAO: Object {
         self.latitude = latitude
         self.longitude = longitude
         self.nationality = nationality
+        self.timezoneDescription = timezoneDescription
+        self.timezoneOffset = timezoneOffset
+        self.cell = cell
+        self.phone = phone
+        self.city = city
+        self.streetName = streetName
+        self.streetNumber = streetNumber
         
     }
 

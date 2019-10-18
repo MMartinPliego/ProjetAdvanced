@@ -19,6 +19,7 @@ struct UserDTO: Codable {
     let picture: PictureDTO?
     let nat: String?
     let location: LocationDTO?
+    let timezone: TimezoneDTO?
 
     // Hide because service return some
     // errors with this data

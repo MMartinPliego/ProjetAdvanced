@@ -9,7 +9,6 @@
 import Foundation
 
 struct LoginDTO: Codable {
-    
     let uuid: String?
     let username: String?
     let password: String?

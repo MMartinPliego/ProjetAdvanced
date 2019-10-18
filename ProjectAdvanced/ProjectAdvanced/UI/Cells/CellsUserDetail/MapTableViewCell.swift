@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class MapTableViewCell: UITableViewCell {
+    static let cellIdentifier = String(describing: MapTableViewCell.self)
     
     
     @IBOutlet weak var mLabelMap: UILabel!
