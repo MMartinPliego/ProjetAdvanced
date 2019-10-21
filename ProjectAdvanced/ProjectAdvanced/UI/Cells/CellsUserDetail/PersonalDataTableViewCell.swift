@@ -15,6 +15,7 @@ class PersonalDataTableViewCell: UITableViewCell {
     @IBOutlet weak var mView: UIView!
     @IBOutlet weak var mImage: UIImageView!
     @IBOutlet weak var mLabelName: UILabel!
+    @IBOutlet weak var mLabelLastName: UILabel!
     @IBOutlet weak var mLabelNat: UILabel!
     @IBOutlet weak var mLabelGender: UILabel!
     
@@ -22,6 +23,7 @@ class PersonalDataTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         mImage.image = nil
         mLabelName.text = nil
+        mLabelLastName.text = nil
         mLabelNat.text = nil
         mLabelGender.text = nil
     }
@@ -38,11 +40,12 @@ class PersonalDataTableViewCell: UITableViewCell {
     }
     
     //MARK: - Configure Methods
-    func configureCell(image: String? = nil, name: String? = nil, nat: String? = nil, gender: String? = nil) {
+    func configureCell(image: String? = nil, name: String? = nil, lastName: String? = nil, nat: String? = nil, gender: String? = nil) {
         let url = URL(string: image ?? "")
         
         mImage.kf.setImage(with: url)
         mLabelName.text = name
+        mLabelLastName.text = lastName
         mLabelNat.text = nat
         mLabelGender.text = gender
     }

@@ -55,7 +55,7 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
         switch UserDetailCellType(rawValue: indexPath.row) {
             case .personal:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier, for: indexPath) as? PersonalDataTableViewCell {
-                    cell.configureCell(image: user?.avatar, name: user?.firstName, nat: user?.nationality, gender: user?.gender)
+                    cell.configureCell(image: user?.avatar, name: user?.firstName, lastName: user?.lastName, nat: user?.nationality, gender: user?.gender)
                     return cell
                 }
                 return UITableViewCell()
@@ -97,7 +97,7 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
         switch UserDetailCellType(rawValue: indexPath.row) {
             
         case .personal:
-            cellHeight = 180
+            cellHeight = 190
             
         case .map:
             cellHeight = 300
