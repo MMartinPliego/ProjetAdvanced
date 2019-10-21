@@ -28,6 +28,9 @@ class PersonalDataTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        mView.layer.cornerRadius = 6.0
+        mView.configureShadows()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,4 +47,12 @@ class PersonalDataTableViewCell: UITableViewCell {
         mLabelGender.text = gender
     }
     
+    func flag(country: String) -> String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
+    }
 }

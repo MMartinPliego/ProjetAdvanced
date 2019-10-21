@@ -173,7 +173,9 @@ class DataManager {
                     cell: userDAO.cell,
                     timezoneDescription: userDAO.timezoneDescription,
                     timezoneOffset: userDAO.timezoneOffset,
-                    streetName: userDAO.streetName)
+                    streetName: userDAO.streetName,
+                    latitude: userDAO.latitude,
+                    longitude: userDAO.longitude)
     }
 }
 

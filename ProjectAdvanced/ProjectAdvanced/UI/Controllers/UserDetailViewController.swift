@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum UserDetailCellType: Int {
-    case personal = 0
-    case map
-    case country
-    case contact
-}
-
 class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func onActionPressed (_ sender:UIButton)  {
+        
     }
     
+    private enum UserDetailCellType: Int {
+        case personal = 0
+        case map = 2
+        case country = 1
+        case contact = 3
+    }
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class UserDetailViewController: UIViewController {
     
     var user: User? = nil
     
-    func configureViewDetail() {
+    func configureViewDetail(){
         
     }
 }
@@ -49,44 +49,70 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
         return 4
     }
     
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Aquí hacer el case para que entre en la celda correspondiente
         
-        switch indexPath.row {
-        case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier, for: indexPath) as? PersonalDataTableViewCell {
-                cell.configureCell(image: user?.avatar, name: user?.firstName, nat: user?.nationality, gender: user?.gender)
-                return cell
-            }
-            return UITableViewCell()
+        switch UserDetailCellType(rawValue: indexPath.row) {
+            case .personal:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier, for: indexPath) as? PersonalDataTableViewCell {
+                    cell.configureCell(image: user?.avatar, name: user?.firstName, nat: user?.nationality, gender: user?.gender)
+                    return cell
+                }
+                return UITableViewCell()
             
-        case 1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: MapTableViewCell.cellIdentifier, for: indexPath) as? MapTableViewCell {
-                return cell
+            case .map:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: MapTableViewCell.cellIdentifier, for: indexPath) as? MapTableViewCell {
+                    cell.configureCell(latitude: user?.latitude, longitude: user?.longitude)
+                    return cell
                 
-            }
-            return UITableViewCell()
+                }
+                return UITableViewCell()
             
-        case 2:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.cellIdentifier, for: indexPath) as? CountryTableViewCell {
-                cell.configureCell(country: user?.country, city: user?.city, street: user?.streetName)
-                return cell
+            case .country:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.cellIdentifier, for: indexPath) as? CountryTableViewCell {
+                    cell.configureCell(country: user?.country, city: user?.city, street: user?.streetName)
+                    return cell
+                }
+                return UITableViewCell()
+            
+            case .contact:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: ContactDataTableViewCell.cellIdentifier, for: indexPath) as? ContactDataTableViewCell {
+                    cell.configureCell(phone: user?.phone, cell: user?.cell, email: user?.email, timezone: user?.timezone)
+                    return cell
+                }
+                return UITableViewCell()
+            
+            default:
+                break
             }
-            return UITableViewCell()
+        
+        return UITableViewCell()
+    }
+    
+    // función para pintar el alto de la celda
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        var cellHeight: CGFloat = 0
+        
+        switch UserDetailCellType(rawValue: indexPath.row) {
+            
+        case .personal:
+            cellHeight = 180
+            
+        case .map:
+            cellHeight = 300
+            
+        case .country:
+            cellHeight = 150
+            
+        case .contact:
+            cellHeight = 150
             
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: ContactDataTableViewCell.cellIdentifier, for: indexPath) as? ContactDataTableViewCell {
-                cell.configureCell(phone: user?.phone, cell: user?.cell, email: user?.email, timezone: user?.timezone)
-                return cell
-            }
-            return UITableViewCell()
+            cellHeight = 180
         }
         
+        return cellHeight
     }
     
 }

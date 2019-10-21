@@ -43,6 +43,7 @@ class UsersViewController: UIViewController {
         
         loadOptionSelected()
         loadUsers()
+        
     }
     
     private func configureRefreshControl() {

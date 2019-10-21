@@ -27,7 +27,9 @@ class ContactDataTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        mView.layer.cornerRadius = 6.0
+        mView.configureShadows()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

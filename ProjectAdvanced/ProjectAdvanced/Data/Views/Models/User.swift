@@ -25,6 +25,8 @@ class User {
     let timezoneOffset: String?
     let streetName: String?
     let streetNumber: String?
+    let latitude: String?
+    let longitude: String?
     
     var name: String {
         var userName = ""
@@ -95,7 +97,9 @@ class User {
          timezoneDescription: String? = nil,
          timezoneOffset: String? = nil,
          streetName: String? = nil,
-         streetNumber: String? = nil) {
+         streetNumber: String? = nil,
+         latitude: String? = nil,
+         longitude: String? = nil) {
         
         self.id = id
         self.avatar = avatar
@@ -113,6 +117,8 @@ class User {
         self.timezoneOffset = timezoneOffset
         self.streetName = streetName
         self.streetNumber = streetNumber
+        self.latitude = latitude
+        self.longitude = longitude
     }
     
 }
