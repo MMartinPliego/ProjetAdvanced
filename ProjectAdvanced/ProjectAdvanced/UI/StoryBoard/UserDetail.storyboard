@@ -108,27 +108,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYM-US-JHo">
                                                     <rect key="frame" x="40" y="19" width="334" height="262"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="56C-73-Rmw">
+                                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="327-JX-CUB">
                                                             <rect key="frame" x="0.0" y="0.0" width="334" height="262"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mapa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRT-f6-3jW">
-                                                                    <rect key="frame" x="150" y="0.0" width="34.5" height="26"/>
-                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="327-JX-CUB">
-                                                                    <rect key="frame" x="47" y="34" width="240" height="228"/>
-                                                                </mapView>
-                                                            </subviews>
-                                                        </stackView>
+                                                        </mapView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="56C-73-Rmw" secondAttribute="trailing" id="4DP-fl-udg"/>
-                                                        <constraint firstAttribute="bottom" secondItem="56C-73-Rmw" secondAttribute="bottom" id="DPb-Pe-D6I"/>
-                                                        <constraint firstItem="56C-73-Rmw" firstAttribute="leading" secondItem="SYM-US-JHo" secondAttribute="leading" id="Whc-Ja-xqM"/>
-                                                        <constraint firstItem="56C-73-Rmw" firstAttribute="top" secondItem="SYM-US-JHo" secondAttribute="top" id="hQM-e3-H4q"/>
+                                                        <constraint firstAttribute="bottom" secondItem="327-JX-CUB" secondAttribute="bottom" id="8Hw-3s-yMA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="327-JX-CUB" secondAttribute="trailing" id="IeR-GO-XWg"/>
+                                                        <constraint firstItem="327-JX-CUB" firstAttribute="top" secondItem="SYM-US-JHo" secondAttribute="top" id="Rsz-bC-VR1"/>
+                                                        <constraint firstItem="327-JX-CUB" firstAttribute="leading" secondItem="SYM-US-JHo" secondAttribute="leading" id="Tjv-pi-pd3"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -140,7 +129,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="mLabelMap" destination="aRT-f6-3jW" id="Dq2-nO-c4e"/>
                                             <outlet property="mMap" destination="327-JX-CUB" id="HbC-8U-wpy"/>
                                             <outlet property="mView" destination="SYM-US-JHo" id="XuI-0V-iRG"/>
                                         </connections>

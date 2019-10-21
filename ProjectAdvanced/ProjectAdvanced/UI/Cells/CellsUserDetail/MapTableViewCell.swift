@@ -13,11 +13,10 @@ class MapTableViewCell: UITableViewCell {
     static let cellIdentifier = String(describing: MapTableViewCell.self)
     
     @IBOutlet weak var mView: UIView!
-    @IBOutlet weak var mLabelMap: UILabel!
     @IBOutlet weak var mMap: MKMapView!
     
     
-    private let regionRadius: CLLocationDistance = 1000
+    private let regionRadius: CLLocationDistance = 500000
     
     override func prepareForReuse() {
         
@@ -38,6 +37,8 @@ class MapTableViewCell: UITableViewCell {
         
         let initialLocation = CLLocation(latitude: latitude,
                                          longitude: longitude)
+        
+        centerMapOnLocation(location: initialLocation)
     }
     
     
@@ -47,5 +48,5 @@ class MapTableViewCell: UITableViewCell {
                                                   longitudinalMeters: regionRadius)
         mMap.setRegion(coordinateRegion, animated: true)
     }
-    
+
 }
