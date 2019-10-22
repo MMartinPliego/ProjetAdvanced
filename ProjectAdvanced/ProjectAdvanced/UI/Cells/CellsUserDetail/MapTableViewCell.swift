@@ -16,7 +16,7 @@ class MapTableViewCell: UITableViewCell {
     @IBOutlet weak var mMap: MKMapView!
     
     //ver la cantidad que se mostrará en el mapa
-    private let regionRadius: CLLocationDistance = 200_000
+    private let regionRadius: CLLocationDistance = 800_000
     private var userLocation: CLLocation? = nil
     
     
@@ -42,6 +42,7 @@ class MapTableViewCell: UITableViewCell {
                                          longitude: longitude)
         
         centerMapOnLocation(location: initialLocation)
+        addUserMark(location: initialLocation)
     }
     
     
@@ -51,5 +52,28 @@ class MapTableViewCell: UITableViewCell {
                                                   longitudinalMeters: regionRadius)
         mMap.setRegion(coordinateRegion, animated: true)
     }
+    
+    //Poner una chincheta en el mapa
+    private func addUserMark(location: CLLocation) {
+        mMap.addAnnotation(UserMarkAnnotacion(tittle: "User name",
+                                              locationName: "calle, ciudad",
+                                              coordinate: location.coordinate))
+    }
 
+}
+
+//Poner una chincheta en el mapa
+class UserMarkAnnotacion: NSObject, MKAnnotation {
+    let title: String?
+    let locationName: String?
+    let coordinate: CLLocationCoordinate2D
+    var subtitle: String? {
+        return locationName
+    }
+    
+    init(tittle: String, locationName: String, coordinate: CLLocationCoordinate2D) {
+        self.title = tittle
+        self.locationName = locationName
+        self.coordinate = coordinate
+    }
 }

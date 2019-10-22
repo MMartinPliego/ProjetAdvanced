@@ -177,5 +177,9 @@ class DataManager {
                     latitude: userDAO.latitude,
                     longitude: userDAO.longitude)
     }
+    
+    func deleteUser(user: UserDAO) {
+        DatabaseManager.delete(DatabaseManager)
+    }
 }
 

@@ -14,8 +14,29 @@ class UserDetailViewController: UIViewController {
     
     @IBAction func onActionPressed (_ sender:UIButton)  {
         
+           let alert = UIAlertController(title: "Eliminar usuario",
+                                         message: "Vas a eliminar al usuario, ¿Estás seguro?",
+                                         preferredStyle: .alert)
+           
+           alert.addAction(UIAlertAction(title: "Eliminar",
+                                         style: .destructive,
+                                         handler: {[weak self] _ in
+                                            
+                
+                //UserDAO.delete(where: { $0.name == self?.subject?.name ?? ""})
+                                            
+               // Para liberar el espacio de memoria del Clousure se pone [weak self] no dejar nada en memoria
+               self?.navigationController?.popViewController(animated: true)
+           }))
+           
+           alert.addAction(UIAlertAction(title: "Cancelar",
+                                         style: .cancel))
+
+           
+           present(alert, animated: true)
     }
     
+
     private enum UserDetailCellType: Int {
         case personal = 0
         case map = 2
@@ -26,7 +47,7 @@ class UserDetailViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configure(tableView: tableView)
         //para poner titulo en el detalle de los usuarios
         title = user?.name
