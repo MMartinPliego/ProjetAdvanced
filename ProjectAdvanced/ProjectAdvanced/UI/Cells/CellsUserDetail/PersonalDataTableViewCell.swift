@@ -31,6 +31,7 @@ class PersonalDataTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        mImage.layer.cornerRadius = 75.0
         mView.layer.cornerRadius = 6.0
         mView.configureShadows()
     }
@@ -40,22 +41,15 @@ class PersonalDataTableViewCell: UITableViewCell {
     }
     
     //MARK: - Configure Methods
-    func configureCell(image: String? = nil, name: String? = nil, lastName: String? = nil, nat: String? = nil, gender: String? = nil) {
+    func configureCell(image: String? = nil, name: String? = nil, lastName: String? = nil, nationality: String? = nil, gender: String? = nil) {
         let url = URL(string: image ?? "")
         
         mImage.kf.setImage(with: url)
         mLabelName.text = name
         mLabelLastName.text = lastName
-        mLabelNat.text = nat
+        mLabelNat.text = nationality
         mLabelGender.text = gender
     }
     
-    func flag(country: String) -> String {
-        let base : UInt32 = 127397
-        var s = ""
-        for v in country.unicodeScalars {
-            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
-        }
-        return String(s)
-    }
+
 }

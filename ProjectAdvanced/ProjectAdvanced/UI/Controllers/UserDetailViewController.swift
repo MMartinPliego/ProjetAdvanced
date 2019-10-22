@@ -28,6 +28,8 @@ class UserDetailViewController: UIViewController {
         super.viewDidLoad()
         
         configure(tableView: tableView)
+        //para poner titulo en el detalle de los usuarios
+        title = user?.name
     }
     
     var user: User? = nil
@@ -55,7 +57,7 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
         switch UserDetailCellType(rawValue: indexPath.row) {
             case .personal:
                 if let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier, for: indexPath) as? PersonalDataTableViewCell {
-                    cell.configureCell(image: user?.avatar, name: user?.firstName, lastName: user?.lastName, nat: user?.nationality, gender: user?.gender)
+                    cell.configureCell(image: user?.avatar, name: user?.firstName, lastName: user?.lastName, nationality: user?.flag, gender: user?.gender)
                     return cell
                 }
                 return UITableViewCell()

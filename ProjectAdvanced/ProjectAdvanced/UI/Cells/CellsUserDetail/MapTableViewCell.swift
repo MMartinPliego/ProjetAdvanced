@@ -15,23 +15,26 @@ class MapTableViewCell: UITableViewCell {
     @IBOutlet weak var mView: UIView!
     @IBOutlet weak var mMap: MKMapView!
     
+    //ver la cantidad que se mostrará en el mapa
+    private let regionRadius: CLLocationDistance = 200_000
+    private var userLocation: CLLocation? = nil
     
-    private let regionRadius: CLLocationDistance = 500000
     
     override func prepareForReuse() {
-        
+        userLocation = nil
+        mMap.delegate = nil
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        mView.layer.cornerRadius = 6.0
+        mMap.layer.cornerRadius = 8.0
+        mView.layer.cornerRadius = 8.0
         mView.configureShadows()
     }
     
     
     func configureCell(latitude: String? = nil, longitude: String? = nil) {
-        
         let latitude = (latitude! as NSString).doubleValue
         let longitude = (longitude! as NSString).doubleValue
         

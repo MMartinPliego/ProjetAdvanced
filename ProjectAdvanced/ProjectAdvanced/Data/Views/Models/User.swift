@@ -42,6 +42,19 @@ class User {
         return"\(userName)"
     }
     
+    //funciómn de convertir bandera del pais
+    var flag: String {
+            guard let nat = nationality else {
+                return ""
+            }
+            let base : UInt32 = 127397
+            var s = ""
+            for v in nat.uppercased().unicodeScalars {
+                s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+            }
+            return String(s)
+    }
+    
     var timezone: String {
         var userTimezone = ""
         if let userTimezoneDescription = timezoneDescription {

@@ -104,6 +104,15 @@ class UsersViewController: UIViewController {
                 collectionView.reloadData()
         }
     }
+    
+    //función para dejar margen superior desde el segmentoption
+    private func edgesInsetsDistance(view: UIView) -> UIEdgeInsets {
+        UIEdgeInsets(top: (segmentOptions.frame.origin.y - view.frame.origin.y) +
+            segmentOptions.frame.size.height + cellSpacing,
+                     left: 0,
+                     bottom: 0,
+                     right: 0)
+    }
 }
 
 
@@ -119,10 +128,8 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
-        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y,
-                                              left: 0,
-                                              bottom: 0,
-                                              right: 0)
+        
+        tableView.contentInset = edgesInsetsDistance(view: tableView)
         
         tableView.refreshControl = refreshControlTableView
         
@@ -165,10 +172,7 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                       bundle: nil),
                                 forCellWithReuseIdentifier: PersonCollectionViewCell.cellIdentifier)
         
-        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y,
-                                                   left: 0,
-                                                   bottom: 0,
-                                                   right: 0)
+        collectionView.contentInset = edgesInsetsDistance(view: collectionView)
         
         collectionView.refreshControl = refreshControlCollectionView
         
