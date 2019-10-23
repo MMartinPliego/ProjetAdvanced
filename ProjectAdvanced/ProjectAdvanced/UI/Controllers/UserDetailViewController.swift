@@ -11,29 +11,31 @@ import UIKit
 class UserDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var deleteButton: UIButton!
     
-    @IBAction func onActionPressed (_ sender:UIButton)  {
+    @IBAction func onActionPressed (_ sender: UIButton)  {
         
-           let alert = UIAlertController(title: "Eliminar usuario",
-                                         message: "Vas a eliminar al usuario, ¿Estás seguro?",
-                                         preferredStyle: .alert)
-           
-           alert.addAction(UIAlertAction(title: "Eliminar",
-                                         style: .destructive,
-                                         handler: {[weak self] _ in
-                                            
-                
-                //UserDAO.delete(where: { $0.name == self?.subject?.name ?? ""})
-                                            
-               // Para liberar el espacio de memoria del Clousure se pone [weak self] no dejar nada en memoria
-               self?.navigationController?.popViewController(animated: true)
-           }))
-           
-           alert.addAction(UIAlertAction(title: "Cancelar",
-                                         style: .cancel))
-
-           
-           present(alert, animated: true)
+        let alert = UIAlertController(title: "Eliminar usuario",
+                                      message: "Vas a eliminar a \(String(describing: user?.name)), ¿Estás seguro?",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Eliminar",
+                                      style: .destructive,
+                                      handler: {[weak self] _ in
+                                        guard let userId = self?.user?.id else {
+                                            return
+                                        }
+                                        
+                                        DataManager.shared.deleteUser(user: userId) {_ in
+                                            self?.navigationController?.popViewController(animated: true)
+                                            //self?.dismiss(animated: true, completion: nil)
+                                        }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar",
+                                      style: .cancel))
+        
+        present(alert, animated: true)
     }
     
 

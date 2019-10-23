@@ -62,6 +62,28 @@ class DataManager {
     func save(optionSelected: Int) {
         DatabaseManager.shared.save(option: optionSelected)
     }
+    
+    
+    //función borrar usuario de la BD
+    func deleteUser(user id: String, completion: @escaping ServiceCompletion) {
+        DispatchQueue.global(qos: .background).async {
+            guard let userDAO = DatabaseManager.shared.user(by: id) else {
+                DispatchQueue.main.async {
+                    completion(.success(data: nil))
+                }
+                
+                return
+            }
+            
+            DatabaseManager.shared.delete(user: userDAO)
+            
+            DispatchQueue.main.async {
+                completion(.success(data: nil))
+            }
+            return
+        }
+        
+    }
 
         
     // MARK: - Private methods
@@ -115,6 +137,7 @@ class DataManager {
             }
         }
     }
+    
     
     private func save(users: UsersDTO) {
         guard let usersToSave = users.users else {
@@ -177,9 +200,6 @@ class DataManager {
                     latitude: userDAO.latitude,
                     longitude: userDAO.longitude)
     }
-    
-    func deleteUser(user: UserDAO) {
-        DatabaseManager.delete(DatabaseManager)
-    }
-}
 
+    
+}
