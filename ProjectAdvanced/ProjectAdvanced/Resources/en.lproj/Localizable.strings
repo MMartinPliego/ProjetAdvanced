@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ProjectAdvanced
+
+  Created by Manuel Martín on 24/10/2019.
+  Copyright © 2019 Manuel Martín. All rights reserved.
+*/
+
+"alert_delette_user_tittle" = "Delete user";
+"msg_delete" = "Delete user %@, ok?";
+"txt_delete" = "Delete";
+"txt_canceled" = "Cancel";

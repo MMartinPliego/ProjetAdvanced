@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6EDC2EF9D340FED88B69B4C0 /* Pods_ProjectAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977B7C26E7E916ABB05FCE17 /* Pods_ProjectAdvanced.framework */; };
+		D929587F2360D8B900CCA48F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D929587E2360D8B900CCA48F /* GoogleService-Info.plist */; };
 		D94136A3234523F100D4D71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94136A2234523F100D4D71B /* AppDelegate.swift */; };
 		D94136A5234523F100D4D71B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94136A4234523F100D4D71B /* SceneDelegate.swift */; };
 		D94136A7234523F100D4D71B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94136A6234523F100D4D71B /* SplashViewController.swift */; };
@@ -22,6 +23,12 @@
 		D997C10823575FE700C33C01 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C10623575FE700C33C01 /* ContactDataTableViewCell.swift */; };
 		D997C10B2357611700C33C01 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997C10A2357611700C33C01 /* UserDetailViewController.swift */; };
 		D997C10D2357649100C33C01 /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D997C10C2357649100C33C01 /* UserDetail.storyboard */; };
+		D99B338423621D5300326195 /* AddUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338323621D5300326195 /* AddUserData.swift */; };
+		D99B338623621D6400326195 /* AddUserGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338523621D6400326195 /* AddUserGender.swift */; };
+		D99B338823621D7E00326195 /* AddUserBirthdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338723621D7E00326195 /* AddUserBirthdate.swift */; };
+		D99B338A23621D8B00326195 /* AddUserNat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338923621D8B00326195 /* AddUserNat.swift */; };
+		D99B338C23621DDD00326195 /* AddUserHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338B23621DDD00326195 /* AddUserHouse.swift */; };
+		D99B338E23621DF100326195 /* AddUserCoordenates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B338D23621DF100326195 /* AddUserCoordenates.swift */; };
 		D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94136AB234523FD00D4D71B /* Assets.xcassets */; };
 		D9A5848023464B2900E65A86 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A5847F23464B2900E65A86 /* Splash.storyboard */; };
 		D9A584822346512E00E65A86 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A584812346512E00E65A86 /* UserViewController.swift */; };
@@ -46,6 +53,10 @@
 		D9F46B2B2347C7D9009FBE23 /* RegisteredDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B2A2347C7D9009FBE23 /* RegisteredDTO.swift */; };
 		D9F46B2F2347C850009FBE23 /* PictureDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B2E2347C850009FBE23 /* PictureDTO.swift */; };
 		D9F46B332347CC72009FBE23 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F46B322347CC72009FBE23 /* DataManager.swift */; };
+		D9F902482361EA3E007079D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9F9024A2361EA3E007079D2 /* Localizable.strings */; };
+		D9F9024D2361F459007079D2 /* AddUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F9024C2361F459007079D2 /* AddUser.storyboard */; };
+		D9F9024F2361FB65007079D2 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9024E2361FB65007079D2 /* AddUserViewController.swift */; };
+		D9F902512362021A007079D2 /* AddUserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F902502362021A007079D2 /* AddUserName.swift */; };
 		F116BB10234C632C00D3A4BB /* DobDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB0F234C632C00D3A4BB /* DobDTO.swift */; };
 		F116BB12234C68D000D3A4BB /* IdDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB11234C68D000D3A4BB /* IdDTO.swift */; };
 		F116BB14234C69B400D3A4BB /* Timezone.DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116BB13234C69B400D3A4BB /* Timezone.DTO.swift */; };
@@ -54,6 +65,7 @@
 /* Begin PBXFileReference section */
 		73A68344E7238E53D2FB30D6 /* Pods-ProjectAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAdvanced.release.xcconfig"; path = "Target Support Files/Pods-ProjectAdvanced/Pods-ProjectAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		977B7C26E7E916ABB05FCE17 /* Pods_ProjectAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D929587E2360D8B900CCA48F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D941369F234523F100D4D71B /* ProjectAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectAdvanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94136A2234523F100D4D71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94136A4234523F100D4D71B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +83,12 @@
 		D997C10623575FE700C33C01 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
 		D997C10A2357611700C33C01 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D997C10C2357649100C33C01 /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
+		D99B338323621D5300326195 /* AddUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserData.swift; sourceTree = "<group>"; };
+		D99B338523621D6400326195 /* AddUserGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserGender.swift; sourceTree = "<group>"; };
+		D99B338723621D7E00326195 /* AddUserBirthdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserBirthdate.swift; sourceTree = "<group>"; };
+		D99B338923621D8B00326195 /* AddUserNat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserNat.swift; sourceTree = "<group>"; };
+		D99B338B23621DDD00326195 /* AddUserHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserHouse.swift; sourceTree = "<group>"; };
+		D99B338D23621DF100326195 /* AddUserCoordenates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCoordenates.swift; sourceTree = "<group>"; };
 		D9A5847F23464B2900E65A86 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		D9A584812346512E00E65A86 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D9A58483234662AE00E65A86 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +112,11 @@
 		D9F46B2A2347C7D9009FBE23 /* RegisteredDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredDTO.swift; sourceTree = "<group>"; };
 		D9F46B2E2347C850009FBE23 /* PictureDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDTO.swift; sourceTree = "<group>"; };
 		D9F46B322347CC72009FBE23 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D9F902492361EA3E007079D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D9F9024B2361EAAC007079D2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D9F9024C2361F459007079D2 /* AddUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUser.storyboard; sourceTree = "<group>"; };
+		D9F9024E2361FB65007079D2 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		D9F902502362021A007079D2 /* AddUserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserName.swift; sourceTree = "<group>"; };
 		F116BB0F234C632C00D3A4BB /* DobDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobDTO.swift; sourceTree = "<group>"; };
 		F116BB11234C68D000D3A4BB /* IdDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdDTO.swift; sourceTree = "<group>"; };
 		F116BB13234C69B400D3A4BB /* Timezone.DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone.DTO.swift; sourceTree = "<group>"; };
@@ -137,6 +160,7 @@
 				D9A584752346446900E65A86 /* Resources */,
 				D9A5848C2346658000E65A86 /* Extension */,
 				D94136B0234523FD00D4D71B /* Info.plist */,
+				D929587E2360D8B900CCA48F /* GoogleService-Info.plist */,
 				D9A584772346448C00E65A86 /* UI */,
 				D9A584762346447B00E65A86 /* Data */,
 			);
@@ -171,6 +195,7 @@
 				D9F46B0D23479CF8009FBE23 /* lottie.json */,
 				D9F46B0B23479C50009FBE23 /* lottie2.json */,
 				D94136AB234523FD00D4D71B /* Assets.xcassets */,
+				D9F9024A2361EA3E007079D2 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,6 +227,7 @@
 				D9A584812346512E00E65A86 /* UserViewController.swift */,
 				D94136A6234523F100D4D71B /* SplashViewController.swift */,
 				D997C10A2357611700C33C01 /* UserDetailViewController.swift */,
+				D9F9024E2361FB65007079D2 /* AddUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +256,7 @@
 				D9A5847F23464B2900E65A86 /* Splash.storyboard */,
 				D94136A8234523F100D4D71B /* Main.storyboard */,
 				D997C10C2357649100C33C01 /* UserDetail.storyboard */,
+				D9F9024C2361F459007079D2 /* AddUser.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 		D9A58487234662D700E65A86 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D9F9025223620223007079D2 /* CellsAddUser */,
 				D997C0F523575EE600C33C01 /* CellsUserDetail */,
 				D9A58483234662AE00E65A86 /* PersonTableViewCell.swift */,
 				D9A58484234662AE00E65A86 /* PersonTableViewCell.xib */,
@@ -299,6 +327,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D9F9025223620223007079D2 /* CellsAddUser */ = {
+			isa = PBXGroup;
+			children = (
+				D9F902502362021A007079D2 /* AddUserName.swift */,
+				D99B338323621D5300326195 /* AddUserData.swift */,
+				D99B338523621D6400326195 /* AddUserGender.swift */,
+				D99B338723621D7E00326195 /* AddUserBirthdate.swift */,
+				D99B338923621D8B00326195 /* AddUserNat.swift */,
+				D99B338B23621DDD00326195 /* AddUserHouse.swift */,
+				D99B338D23621DF100326195 /* AddUserCoordenates.swift */,
+			);
+			path = CellsAddUser;
+			sourceTree = "<group>";
+		};
 		DC04F3D0F40B2F720EDA2548 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +370,7 @@
 				D941369C234523F100D4D71B /* Frameworks */,
 				D941369D234523F100D4D71B /* Resources */,
 				D5E561A60418AA8A8EFEE8C4 /* [CP] Embed Pods Frameworks */,
+				D929587D2360D63B00CCA48F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -360,6 +403,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D9413696234523F100D4D71B;
 			productRefGroup = D94136A0234523F100D4D71B /* Products */;
@@ -381,9 +425,12 @@
 				D94136AF234523FD00D4D71B /* LaunchScreen.storyboard in Resources */,
 				D9A5848B2346647100E65A86 /* PersonCollectionViewCell.xib in Resources */,
 				D9A5847E234649DB00E65A86 /* Assets.xcassets in Resources */,
+				D9F9024D2361F459007079D2 /* AddUser.storyboard in Resources */,
+				D929587F2360D8B900CCA48F /* GoogleService-Info.plist in Resources */,
 				D94136AA234523F100D4D71B /* Main.storyboard in Resources */,
 				D9F46B1023479EE9009FBE23 /* lottie_bueno.json in Resources */,
 				D9F46B0E23479CF8009FBE23 /* lottie.json in Resources */,
+				D9F902482361EA3E007079D2 /* Localizable.strings in Resources */,
 				D9A5848023464B2900E65A86 /* Splash.storyboard in Resources */,
 				D9A58486234662AE00E65A86 /* PersonTableViewCell.xib in Resources */,
 				D9F46B0C23479C50009FBE23 /* lottie2.json in Resources */,
@@ -432,6 +479,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProjectAdvanced/Pods-ProjectAdvanced-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D929587D2360D63B00CCA48F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -445,12 +509,15 @@
 				D9AE815D234CEE9400D8C9A4 /* User.swift in Sources */,
 				D9A5848A2346647100E65A86 /* PersonCollectionViewCell.swift in Sources */,
 				F116BB14234C69B400D3A4BB /* Timezone.DTO.swift in Sources */,
+				D99B338823621D7E00326195 /* AddUserBirthdate.swift in Sources */,
 				D9F46B232347C63C009FBE23 /* CoordinatesDTO.swift in Sources */,
+				D99B338623621D6400326195 /* AddUserGender.swift in Sources */,
 				D9A5848E2346659C00E65A86 /* UIView+Utils.swift in Sources */,
 				D9F46B132347B694009FBE23 /* UserDAO.swift in Sources */,
 				D9F46B1B2347C26D009FBE23 /* UsersDTO.swift in Sources */,
 				D9F46B332347CC72009FBE23 /* DataManager.swift in Sources */,
 				D9F46B2F2347C850009FBE23 /* PictureDTO.swift in Sources */,
+				D9F9024F2361FB65007079D2 /* AddUserViewController.swift in Sources */,
 				D997C10823575FE700C33C01 /* ContactDataTableViewCell.swift in Sources */,
 				D997C10423575FD100C33C01 /* CountryTableViewCell.swift in Sources */,
 				F116BB10234C632C00D3A4BB /* DobDTO.swift in Sources */,
@@ -459,16 +526,21 @@
 				D997C10023575FC200C33C01 /* PersonalDataTableViewCell.swift in Sources */,
 				D9A584822346512E00E65A86 /* UserViewController.swift in Sources */,
 				D9F46B1F2347C577009FBE23 /* NameDTO.swift in Sources */,
+				D9F902512362021A007079D2 /* AddUserName.swift in Sources */,
 				D9F46B1D2347C4D6009FBE23 /* LocationDTO.swift in Sources */,
+				D99B338423621D5300326195 /* AddUserData.swift in Sources */,
 				D9F46B172347BF0D009FBE23 /* UserDTO.swift in Sources */,
 				F116BB12234C68D000D3A4BB /* IdDTO.swift in Sources */,
 				D9F46B2B2347C7D9009FBE23 /* RegisteredDTO.swift in Sources */,
 				D94136A3234523F100D4D71B /* AppDelegate.swift in Sources */,
+				D99B338A23621D8B00326195 /* AddUserNat.swift in Sources */,
 				D997C0FC23575FAA00C33C01 /* MapTableViewCell.swift in Sources */,
 				D997C10B2357611700C33C01 /* UserDetailViewController.swift in Sources */,
 				D9948A8F234BAEBB0018252D /* ApiManager.swift in Sources */,
 				D94136A5234523F100D4D71B /* SceneDelegate.swift in Sources */,
 				D9F46B192347C0F2009FBE23 /* InfoDTO.swift in Sources */,
+				D99B338E23621DF100326195 /* AddUserCoordenates.swift in Sources */,
+				D99B338C23621DDD00326195 /* AddUserHouse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +563,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D9F9024A2361EA3E007079D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9F902492361EA3E007079D2 /* en */,
+				D9F9024B2361EAAC007079D2 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -498,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -558,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

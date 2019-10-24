@@ -14,12 +14,15 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func onActionPressed (_ sender: UIButton)  {
+        guard let userName = user?.name else {
+            return
+        }
         
-        let alert = UIAlertController(title: "Eliminar usuario",
-                                      message: "Vas a eliminar a \(String(describing: user?.name)), ¿Estás seguro?",
-            preferredStyle: .alert)
+        //Delete user and go back
+        let alert = UIAlertController(title: NSLocalizedString("alert_delette_user_tittle", comment: ""),
+                                      message: String(format: NSLocalizedString("msg_delete", comment: ""), userName), preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Eliminar",
+        alert.addAction(UIAlertAction(title: NSLocalizedString("txt_delete", comment: ""),
                                       style: .destructive,
                                       handler: {[weak self] _ in
                                         guard let userId = self?.user?.id else {
@@ -27,12 +30,12 @@ class UserDetailViewController: UIViewController {
                                         }
                                         
                                         DataManager.shared.deleteUser(user: userId) {_ in
-                                            self?.navigationController?.popViewController(animated: true)
-                                            //self?.dismiss(animated: true, completion: nil)
+                                            //self?.navigationController?.popViewController(animated: true)
+                                            self?.dismiss(animated: true, completion: nil)
                                         }
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancelar",
+        alert.addAction(UIAlertAction(title: NSLocalizedString("txt_canceled", comment: ""),
                                       style: .cancel))
         
         present(alert, animated: true)
