@@ -10,11 +10,26 @@ import UIKit
 import MapKit
 
 class AddUserCoordenates: UITableViewCell {
+                static let cellIdentifier = String(describing: AddUserCoordenates.self)
     
-    @IBAction func textfieldLatitude(_ sender: UITextField) {
+    @IBOutlet weak var textfieldLatitude: UITextField!
+    @IBOutlet weak var textfieldLongitude: UITextField!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
+    // MARK: - Lifecycle -
+    override func prepareForReuse() {
+
+    }
+
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        mapView.layer.cornerRadius = 10.0
     }
     
-    @IBAction func textfieldLongitude(_ sender: UITextField) {
+    func configureCell() {
+        
     }
     
     

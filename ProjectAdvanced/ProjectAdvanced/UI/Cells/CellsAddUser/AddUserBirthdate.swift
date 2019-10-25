@@ -9,9 +9,26 @@
 import UIKit
 
 class AddUserBirthdate: UITableViewCell {
+        static let cellIdentifier = String(describing: AddUserBirthdate.self)
     
     @IBOutlet var collectionBirthdate: [UIDatePicker]!
+    @IBOutlet weak var labelBirthdate: UILabel!
     
+   
     
+        // MARK: - Lifecycle -
+        override func prepareForReuse() {
+
+        }
+
+        
+        override func awakeFromNib() {
+            super.awakeFromNib()
+        }
 }
 
+extension AddUserBirthdate: UITextFieldDelegate {
+    func configureCell() {
+        
+    }
+}

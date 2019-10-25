@@ -9,17 +9,30 @@
 import UIKit
 
 class AddUserHouse: UITableViewCell {
+            static let cellIdentifier = String(describing: AddUserHouse.self)
     
-    @IBAction func textfieldCountry(_ sender: UITextField) {
+    @IBOutlet weak var textfieldCountry: UITextField!
+    @IBOutlet weak var textfieldCity: UITextField!
+    @IBOutlet weak var textfieldState: UITextField!
+    @IBOutlet weak var textfieldStreet: UITextField!
+    
+    
+    // MARK: - Lifecycle -
+    override func prepareForReuse() {
+
     }
-    
-    @IBAction func textfieldCity(_ sender: UITextField) {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    
-    @IBAction func textfieldState(_ sender: UITextField) {
+}
+
+
+extension AddUserHouse: UITextFieldDelegate {
+    func configureCell() {
+        textfieldCountry?.delegate = self
+        textfieldCity?.delegate = self
+        textfieldState?.delegate = self
+        textfieldStreet.delegate = self
     }
-    
-    @IBAction func textfieldStreet(_ sender: UITextField) {
-    }
-    
 }

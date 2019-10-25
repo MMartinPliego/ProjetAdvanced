@@ -9,10 +9,11 @@
 import UIKit
 
 class AddUserGender: UITableViewCell {
+            static let cellIdentifier = String(describing: AddUserGender.self)
     
-    @IBOutlet weak var buttonMale: UIButton!
-    @IBOutlet weak var buttonFemale: UIButton!
-    
+    @IBOutlet weak var labelGender: UILabel!
+    @IBOutlet weak var genderSelected: UISegmentedControl!
+
     
     // MARK: - Lifecycle -
     override func prepareForReuse() {
@@ -21,6 +22,13 @@ class AddUserGender: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
     }
     
+}
+
+extension AddUserGender: UITextFieldDelegate {
+    func configureCell() {
+
+    }
 }

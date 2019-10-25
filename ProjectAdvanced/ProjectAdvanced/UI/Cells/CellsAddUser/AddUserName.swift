@@ -10,26 +10,28 @@
 import UIKit
 
 class AddUserName: UITableViewCell {
+    static let cellIdentifier = String(describing: AddUserName.self)
     
     @IBOutlet weak var viewImageSelector: UIView!
-    
-    @IBAction func textfieldFistName(_ sender: UITextField) {
+    @IBOutlet weak var imageUserName: UIImageView!
+    @IBOutlet weak var textfieldFirstName: UITextField!
+    @IBOutlet weak var textfieldLastName: UITextField!
         
-    }
-    
-    @IBAction func textfieldLastName(_ sender: UITextField) {
-        
-    }
-    
-    
-    
     // MARK: - Lifecycle -
     override func prepareForReuse() {
-
     }
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageUserName.layer.cornerRadius = 6.0
     }
+}
 
+
+extension AddUserName: UITextFieldDelegate {
+    func configureCell() {
+        textfieldFirstName?.delegate = self
+        textfieldLastName?.delegate = self
+    }
 }

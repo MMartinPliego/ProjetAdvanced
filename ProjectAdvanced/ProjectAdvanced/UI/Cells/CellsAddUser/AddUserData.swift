@@ -10,18 +10,11 @@
 import UIKit
 
 class AddUserData: UITableViewCell {
-    
-    @IBAction func textfieldEmail(_ sender: UITextField) {
-        
-    }
-    
-    @IBAction func textfieldCell(_ sender: UITextField) {
-        
-    }
-    
-    @IBAction func textfieldPhone(_ sender: UITextField) {
-        
-    }
+        static let cellIdentifier = String(describing: AddUserData.self)
+
+    @IBOutlet weak var textfieldEmail: UITextField!
+    @IBOutlet weak var textfieldCell: UITextField!
+    @IBOutlet weak var textfieldPhone: UITextField!
     
     
     // MARK: - Lifecycle -
@@ -33,4 +26,12 @@ class AddUserData: UITableViewCell {
         super.awakeFromNib()
     }
 
+}
+
+extension AddUserData: UITextFieldDelegate {
+    func configureCell() {
+        textfieldEmail?.delegate = self
+        textfieldCell?.delegate = self
+        textfieldPhone?.delegate = self
+    }
 }

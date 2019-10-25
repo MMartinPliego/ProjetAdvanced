@@ -8,8 +8,29 @@
 
 import UIKit
 
-class AddUserNat: UICollectionViewCell {
+class AddUserNat: UITableViewCell {
+        static let cellIdentifier = String(describing: AddUserNat.self)
     
-    @IBOutlet weak var collectionNat: UICollectionView!
     
+    @IBOutlet weak var labelNat: UILabel!
+    @IBOutlet var collectionNat: Array<UICollectionView>!
+    
+    //Poner el lunes las banderas
+    //private var flagNat: Array = []
+    
+    // MARK: - Lifecycle -
+    override func prepareForReuse() {
+
+    }
+
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+}
+
+extension AddUserNat: UITextFieldDelegate {
+    func configureCell() {
+    }
 }
