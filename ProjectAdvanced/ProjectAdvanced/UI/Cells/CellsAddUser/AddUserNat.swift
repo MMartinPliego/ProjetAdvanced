@@ -27,7 +27,6 @@ class AddUserNat: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }
 
 extension AddUserNat: UITextFieldDelegate {

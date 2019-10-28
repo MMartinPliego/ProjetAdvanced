@@ -88,7 +88,7 @@ extension AddUserViewController: UITableViewDelegate, UITableViewDataSource, UIT
         case .addUserNat:
          if let cell = tableView.dequeueReusableCell(withIdentifier: AddUserNat.cellIdentifier, for: indexPath) as?
              AddUserNat {
-             cell.configureCell()
+            cell.configureCell()
              return cell
          }
          return UITableViewCell()

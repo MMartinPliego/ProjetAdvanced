@@ -13,6 +13,11 @@ class AddUserGender: UITableViewCell {
     
     @IBOutlet weak var labelGender: UILabel!
     @IBOutlet weak var genderSelected: UISegmentedControl!
+    
+    
+    @IBAction func onGenderTypePressed(_ sender: UISegmentedControl) {
+        
+    }
 
     
     // MARK: - Lifecycle -
@@ -26,6 +31,7 @@ class AddUserGender: UITableViewCell {
     }
     
 }
+
 
 extension AddUserGender: UITextFieldDelegate {
     func configureCell() {

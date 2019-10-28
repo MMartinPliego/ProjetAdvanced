@@ -155,6 +155,9 @@
                                                             <date key="minimumDate" timeIntervalSinceReferenceDate="-3187251916">
                                                                 <!--1900-01-01 12:14:44 +0000-->
                                                             </date>
+                                                            <date key="maximumDate" timeIntervalSinceReferenceDate="788871600">
+                                                                <!--2025-12-31 11:00:00 +0000-->
+                                                            </date>
                                                         </datePicker>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -196,6 +199,9 @@
                                                                 <segment title="Male"/>
                                                                 <segment title="Female"/>
                                                             </segments>
+                                                            <connections>
+                                                                <action selector="onGenderTypePressed:" destination="V9B-RK-5aU" eventType="valueChanged" id="ZND-cb-K1j"/>
+                                                            </connections>
                                                         </segmentedControl>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -264,6 +270,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelNat" destination="8uo-Kx-EEZ" id="ymv-Oe-Vqi"/>
+                                            <outletCollection property="collectionNat" destination="r0s-nM-y2U" collectionClass="NSMutableArray" id="gAN-05-OFY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddUserHouse" rowHeight="135" id="cdn-F7-CkL" customClass="AddUserHouse" customModule="ProjectAdvanced" customModuleProvider="target">
