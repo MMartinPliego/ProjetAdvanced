@@ -19,13 +19,26 @@ class AddUserName: UITableViewCell {
         
     // MARK: - Lifecycle -
     override func prepareForReuse() {
+        textfieldFirstName.text = nil
+        textfieldLastName.text = nil
+        imageUserName.image = nil
     }
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         imageUserName.layer.cornerRadius = 6.0
+        
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(onImageTap))
+        imageUserName.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func onImageTap() {
+        
+    }
+    
+
 }
 
 
